@@ -17,7 +17,7 @@ import CTA from "@/components/sections/cta";
 export default function Home() {
   return (
     <main className="relative min-h-screen">
-      <TopStrip />
+  {/*  <TopStrip />*/}
       <Navbar />
       <Hero />
       <BlueBand />
