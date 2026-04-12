@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Existing colors */
+  --primary: #1A344D;
+  --accent: #2B5C8A;
+  --secondary: #7899AD;
+  --bg-light: #EBF5FF;
+  --white: #FFFFFF;
+  --text-dark: #212529;
+  --text-muted: #6C757D;
+
+  /* New typography system colors */
+  --color-text-primary: #212529;
+  --color-text-secondary: #6C757D;
+  --color-text-muted: #BFBFBF;
+  --color-border: #DEE2E6;
+  --color-border-strong: #CED4DA;
+  --color-white: #FFFFFF;
+  --color-accent: #007AFF;
+}
+
+body {
+  color: var(--color-text-primary);
+  background: var(--color-white);
+  font-family: var(--font-inter), sans-serif;
+}
+
+/* Typography Scale (Desktop First) */
+h1, .h1 {
+  font-family: var(--font-bilagike), var(--font-dm-serif), serif;
+  font-size: 64px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+h2, .h2 {
+  font-family: var(--font-bilagike), var(--font-dm-serif), serif;
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+h3, .h3 {
+  font-family: var(--font-bilagike), var(--font-dm-serif), serif;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.heading-lg {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 60px;
+  line-height: 72px;
+  font-weight: 700;
+}
+
+.heading-md {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 48px;
+  line-height: 64px;
+  font-weight: 700;
+}
+
+.heading-sm {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 500;
+}
+
+.subtitle-1 {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: 400;
+}
+
+.subtitle-2 {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.body-lg {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.body-md {
+  font-family: var(--font-figtree), sans-serif;
+  font-size: 16px;
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+.body-regular {
+  font-family: var(--font-figtree), sans-serif;
+  font-size: 16px;
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+.link {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: var(--color-accent);
+}
+
+/* Responsive Typography scaling */
+@media (max-width: 1024px) {
+  h1, .h1 { font-size: 52px; }
+  h2, .h2 { font-size: 40px; }
+  h3, .h3 { font-size: 24px; }
+  .heading-lg { font-size: 48px; }
+  .heading-md { font-size: 40px; }
+  .heading-sm { font-size: 32px; }
+  .body-lg { font-size: 16px; }
+  .body-md { font-size: 15px; }
+  .body-regular { font-size: 15px; }
+}
+
+@media (max-width: 640px) {
+  h1, .h1 { font-size: 40px; }
+  h2, .h2 { font-size: 32px; }
+  h3, .h3 { font-size: 20px; }
+  .heading-lg { font-size: 36px; }
+  .heading-md { font-size: 32px; }
+  .heading-sm { font-size: 24px; }
+  .body-lg { font-size: 15px; }
+  .body-md { font-size: 14px; }
+  .body-regular { font-size: 14px; }
+}
+
+.container-custom {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (min-width: 768px) {
+  .container-custom {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-custom {
+    padding-left: 240px;
+    padding-right: 240px;
+  }
+}

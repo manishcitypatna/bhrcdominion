@@ -1,0 +1,390 @@
+====================================================
+PROJECT: BEVERLY HILLS LANDING PAGE (PIXEL PERFECT)
+====================================================
+
+GOAL:
+Recreate the exact Figma landing page with:
+- Pixel-level layout accuracy
+- Responsive behavior (mobile → desktop)
+- Premium animations
+- Component-based architecture
+
+STACK:
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- next/image
+
+====================================================
+🎨 GLOBAL DESIGN SYSTEM
+====================================================
+
+COLORS:
+--primary: #1A344D
+--accent: #2B5C8A
+--secondary: #7899AD
+--bg-light: #EBF5FF
+--white: #FFFFFF
+--text-dark: #212529
+--text-muted: #6C757D
+
+FONTS:
+- Heading: Bilagike (custom font)
+- UI/Body: Figtree
+- Fallback: Inter
+
+TYPOGRAPHY:
+H1: clamp(42px, 6vw, 96px)
+H2: clamp(32px, 4vw, 64px)
+H3: 28px
+Body: 16px
+Small: 12px
+
+LINE HEIGHT:
+- Headings: 120%
+- Body: 140–160%
+
+====================================================
+📐 LAYOUT SYSTEM
+====================================================
+
+MAX WIDTH:
+1440px
+
+GLOBAL PADDING:
+Desktop: px-[240px]
+Tablet: px-[80px]
+Mobile: px-[24px]
+
+SECTION SPACING:
+py-[120px] desktop
+py-[80px] tablet
+py-[60px] mobile
+
+====================================================
+🔝 TOP STRIP
+====================================================
+
+HEIGHT: 31px
+BACKGROUND: #1A344D
+
+LAYOUT:
+flex justify-between items-center
+padding: 0 240px
+
+LEFT:
+phone icon + number
+
+RIGHT:
+location icon + text
+
+TEXT:
+font-size: 12px
+color: #EBF5FF
+
+====================================================
+🧭 NAVBAR
+====================================================
+
+HEIGHT: 108px
+POSITION: absolute over hero
+
+PADDING:
+16px 240px
+
+LAYOUT:
+flex justify-between items-center
+
+LEFT:
+logo width 308px
+
+CENTER:
+menu items (gap 16px)
+
+RIGHT:
+2 buttons:
+- outline button
+- primary CTA
+
+MOBILE:
+- hide menu
+- show hamburger
+
+INTERACTION:
+- sticky on scroll
+- background fade on scroll
+
+====================================================
+🎯 HERO SECTION
+====================================================
+
+HEIGHT: 1105px
+
+BACKGROUND:
+full-width image + gradient overlay
+
+GRADIENT:
+linear-gradient(
+  180deg,
+  rgba(255,255,255,0) 44%,
+  rgba(235,245,255,0.5) 91%
+)
+
+CONTENT:
+center aligned horizontally
+
+HEADING:
+font: Bilagike
+size: clamp(42px, 6vw, 96px)
+color: #1A344D
+position: lower center (~top 70%)
+
+CTA:
+text link + arrow
+
+ANIMATION:
+fade + slide up
+
+====================================================
+🟦 BLUE BAND SECTION
+====================================================
+
+HEIGHT: 467px
+BACKGROUND: #2B5C8A
+
+LAYOUT:
+centered text + decorative images
+
+TEXT:
+- “Elevate Your Confidence”
+- “Experience the Difference”
+
+FLOATING IMAGES:
+absolute positioned corners
+
+====================================================
+🧾 SERVICES SECTION
+====================================================
+
+LAYOUT:
+horizontal scroll / slider
+
+CARD:
+- large image
+- overlay gradient
+- text bottom-left
+
+TEXT:
+title (white)
+subtitle (small)
+CTA “Learn More →”
+
+HOVER:
+scale image slightly
+
+MOBILE:
+stack vertically
+
+====================================================
+🌿 LOOK & FEEL YOUNGER
+====================================================
+
+LAYOUT:
+single large image
+
+CTA:
+centered button overlay
+
+STYLE:
+minimal, premium
+
+====================================================
+⭐ TRUSTED BY CELEBS
+====================================================
+
+LAYOUT:
+centered heading + paragraph
+
+IMAGES:
+2 images rotated slightly
+
+CTA button below text
+
+====================================================
+📊 REAL RESULTS
+====================================================
+
+LAYOUT:
+3 columns
+
+COMPONENT:
+before/after slider
+
+FEATURE:
+drag handle center
+
+LABELS:
+Before / After badges
+
+TEXT:
+title + subtitle below
+
+====================================================
+📋 WHAT TO EXPECT
+====================================================
+
+LAYOUT:
+left text, right image
+
+LEFT:
+- heading
+- paragraph
+- numbered list (01–05)
+
+RIGHT:
+image
+
+MOBILE:
+stack vertically
+
+====================================================
+👨‍⚕️ LED BY SPECIALISTS
+====================================================
+
+LAYOUT:
+left image, right text
+
+RIGHT:
+- multiple paragraphs
+- CTA button
+
+====================================================
+🏆 AWARDS
+====================================================
+
+LAYOUT:
+center heading
+
+LOGOS:
+horizontal row
+
+MOBILE:
+wrap grid
+
+====================================================
+💬 TESTIMONIALS
+====================================================
+
+LAYOUT:
+masonry grid
+
+CARD TYPES:
+1. text review
+2. image card
+3. video-style card
+
+STYLE:
+rounded corners
+soft shadow
+
+RATINGS:
+star icons
+
+IMPORTANT:
+use CSS columns or grid masonry
+
+====================================================
+🦶 FOOTER
+====================================================
+
+BACKGROUND: #1A344D
+
+LAYOUT:
+4 columns
+
+COLUMN 1:
+logo + contact
+
+COLUMN 2:
+services
+
+COLUMN 3:
+links
+
+COLUMN 4:
+newsletter input
+
+BOTTOM:
+social icons
+
+====================================================
+✨ ANIMATION SYSTEM
+====================================================
+
+LIBRARY: Framer Motion
+
+GLOBAL:
+fade-in (opacity 0 → 1)
+slide-up (y 40 → 0)
+
+HOVER:
+scale 1.05
+
+BUTTON:
+tap scale 0.97
+
+STAGGER:
+delay 0.1
+
+====================================================
+📱 RESPONSIVE RULES
+====================================================
+
+MOBILE:
+- stack all sections
+- reduce padding to 24px
+- center text
+
+TABLET:
+- 2 column layouts
+
+DESKTOP:
+- full layout
+
+TYPOGRAPHY:
+use clamp()
+
+====================================================
+📁 ASSETS
+====================================================
+
+/public/images:
+- hero.png
+- services/*
+- testimonials/*
+- celebs/*
+- results/*
+
+/public/icons:
+- phone
+- location
+- arrow
+
+/fonts:
+- Bilagike.woff2
+
+====================================================
+⚠️ STRICT RULES FOR AI
+====================================================
+
+- DO NOT change spacing
+- DO NOT approximate sizes
+- FOLLOW layout exactly
+- USE Tailwind classes
+- USE next/image
+- MAINTAIN hierarchy
+
+====================================================
+END OF BUILD PLAN
+====================================================
