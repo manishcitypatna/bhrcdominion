@@ -32,6 +32,11 @@ const bilagike = localFont({
 export const metadata: Metadata = {
   title: "Beverly Hills Rejuvenation Center",
   description: "Experience the Difference",
+  icons: {
+    icon: "/icons/fevicone.png",
+    shortcut: "/icons/fevicone.png",
+    apple: "/icons/fevicone.png",
+  },
 };
 
 export default function RootLayout({
