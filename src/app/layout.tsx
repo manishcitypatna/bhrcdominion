@@ -23,30 +23,33 @@ const dmSerif = DM_Serif_Display({
 });
 
 const bilagike = localFont({
-  src: "../../public/fonts/Bilagike.woff2",
+  src: "../fonts/Bilagike.woff2",
   variable: "--font-bilagike",
-  display: "swap",
-  fallback: ["DM Serif Display", "serif"],
+  display: "block", // 🔥 IMPORTANT
 });
 
 export const metadata: Metadata = {
   title: "Beverly Hills Rejuvenation Center",
   description: "Experience the Difference",
-  icons: {
-    icon: "/icons/fevicone.png",
-    shortcut: "/icons/fevicone.png",
-    apple: "/icons/fevicone.png",
-  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${figtree.variable} ${dmSerif.variable} ${bilagike.variable} antialiased`}>
+      <body
+        className={`
+          ${inter.variable} 
+          ${figtree.variable} 
+          ${dmSerif.variable} 
+          ${bilagike.variable} 
+          antialiased 
+          overflow-x-hidden
+        `}
+      >
         {children}
       </body>
     </html>

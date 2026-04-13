@@ -101,6 +101,7 @@ export default function LookFeelYounger() {
         />
 
         {/* DOTS */}
+        <div className="hidden md:block">
         {hotspots.map((dot) => (
           <div
             key={dot.id}
@@ -113,7 +114,7 @@ export default function LookFeelYounger() {
               transform: "translate(-50%, -50%)",
             }}
           />
-        ))}
+        ))}</div>
 
         {/* ACTIVE CARDS */}
         {activeDots.map((dot, index) => {

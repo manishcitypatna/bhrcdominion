@@ -36,7 +36,7 @@ export default function BlueBand() {
                 className="object-cover" 
               />
             </div>
-            <h2 className="text-white text-[clamp(24px,5vw,64px)] leading-[1.1] font-heading font-normal tracking-tight sm:whitespace-nowrap text-center sm:text-left">
+            <h2 className="text-white text-[clamp(24px,5vw,64px)] leading-[1.1] font-heading font-normal tracking-tight text-center sm:text-left">
               Elevate Your Confidence
             </h2>
           </motion.div>

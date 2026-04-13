@@ -58,6 +58,7 @@ const BeforeAfterSlider = ({
   return (
     <div
       ref={containerRef}
+      style={{ touchAction: "pan-y" }}
       className="relative w-full h-[500px] overflow-hidden rounded-[12px] cursor-ew-resize select-none"
       onMouseMove={handleMouseMove}
       onMouseLeave={resetSlider}

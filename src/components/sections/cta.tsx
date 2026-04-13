@@ -22,12 +22,12 @@ export default function CTA() {
     >
 
       {/* BACKGROUND → ONLY DESKTOP */}
-      <div className="hidden md:block absolute inset-0">
+      <div className="absolute inset-0 z-0">
         <Image
           src={CTA_IMAGES.bg}
           alt="background"
           fill
-          className="object-cover"
+          className="object-cover object-center"
           priority
         />
       </div>
@@ -39,9 +39,9 @@ export default function CTA() {
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
         className="
-          absolute right-0 top-0 h-full 
-          w-full 
-          md:w-[50%] 
+          absolute right-0 top-0 h-full z-10
+          w-[80%] 
+          md:w-[50%]
           lg:w-[45%]"
       >
         <Image

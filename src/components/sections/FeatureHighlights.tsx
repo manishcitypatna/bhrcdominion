@@ -24,7 +24,7 @@ export default function FeatureHighlights() {
       
       {/* Background Logo */}
       <div className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 w-full flex justify-center opacity-[0.05] pointer-events-none z-0">
-        <span className="text-[18vw] md:text-[14vw] font-bold text-primary uppercase tracking-tight whitespace-nowrap">
+        <span className="text-[18vw] md:text-[14vw] font-bold text-primary uppercase tracking-tight whitespace-normal">
           BEVERLY HILLS
         </span>
       </div>

@@ -1,12 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { useRef, useEffect, useState } from "react";
 
 const services = [
- {
+  {
     title: "Injectable Services",
     subtitle: "Botox, Dysport, Juvederm, Radiesse, Restylane, and Sculptra",
     image: "/images/landing_page/our_service/our_service_1.png",
@@ -43,122 +42,131 @@ const services = [
   },
 ];
 
-// Doubled items for seamless "circle" loop
+// Duplicate for infinite loop feel
 const allServices = [...services];
 
 export default function Services() {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [isPaused, setIsPaused] = useState(false);
 
+  const [isPaused, setIsPaused] = useState(false);
+  const [isInteracting, setIsInteracting] = useState(false);
+
+  // ✅ AUTO SCROLL
   useEffect(() => {
-    const scrollContainer = scrollRef.current;
-    if (!scrollContainer) return;
+    const container = scrollRef.current;
+    if (!container) return;
 
     let animationId: number;
-    const speed = 0.5; // Very slow speed for continuous feel
+    const speed = 0.5;
 
     const animate = () => {
-      if (!isPaused && scrollContainer) {
-        scrollContainer.scrollLeft += speed;
-        
-        // Calculate the width of one complete set of items
-        const firstSetWidth = scrollContainer.scrollWidth / 2;
-        
-        // If we reach the end of the first set, jump back to the beginning
-        if (scrollContainer.scrollLeft >= firstSetWidth) {
-          scrollContainer.scrollLeft = 0;
+      if (!isPaused && !isInteracting && container) {
+        container.scrollLeft += speed;
+
+        const halfWidth = container.scrollWidth / 2;
+
+        if (container.scrollLeft >= halfWidth) {
+          container.scrollLeft = 0;
         }
       }
+
       animationId = requestAnimationFrame(animate);
     };
 
     animationId = requestAnimationFrame(animate);
 
-    return () => {
-      cancelAnimationFrame(animationId);
-    };
-  }, [isPaused]);
+    return () => cancelAnimationFrame(animationId);
+  }, [isPaused, isInteracting]);
 
+  // ✅ ARROW CONTROL
   const scroll = (direction: "left" | "right") => {
-    const scrollContainer = scrollRef.current;
-    if (!scrollContainer) return;
-    
-    // Get card width dynamically based on screen size
+    const container = scrollRef.current;
+    if (!container) return;
+
+    setIsInteracting(true);
+
     const isDesktop = window.innerWidth >= 1024;
     const isTablet = window.innerWidth >= 640;
-    
-    let cardWidth = 473; // Desktop
-    if (!isDesktop && isTablet) cardWidth = 360; // Tablet
-    if (!isTablet) cardWidth = 280; // Mobile
-    
+
+    let cardWidth = 473;
+    if (!isDesktop && isTablet) cardWidth = 360;
+    if (!isTablet) cardWidth = 280;
+
     const gap = isDesktop ? 24 : isTablet ? 20 : 16;
-    
-    // Scroll 1.5 cards as requested
+
     const scrollAmount = (cardWidth + gap) * 1.5;
-    
-    scrollContainer.scrollBy({
+
+    container.scrollBy({
       left: direction === "left" ? -scrollAmount : scrollAmount,
       behavior: "smooth",
     });
+
+    setTimeout(() => setIsInteracting(false), 2000);
   };
 
   return (
     <section className="relative w-full max-w-[1920px] mx-auto py-[120px] bg-white overflow-hidden">
-      {/* Header Container */}
+      
+      {/* HEADER */}
       <div className="flex justify-between items-center px-[clamp(20px,8vw,240px)] mb-12">
-        <h2 className="text-primary text-[clamp(32px,4vw,48px)] font-heading font-normal leading-tight">
+        <h2 className="text-primary text-[clamp(32px,4vw,48px)] font-heading">
           Our Services
         </h2>
+
         <div className="flex gap-4">
-          <button 
+          <button
             onClick={() => scroll("left")}
-            className="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all focus:outline-none"
-            aria-label="Scroll left"
+            className="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition"
           >
             <ArrowLeft size={20} />
           </button>
-          <button 
+
+          <button
             onClick={() => scroll("right")}
-            className="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all focus:outline-none"
-            aria-label="Scroll right"
+            className="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition"
           >
             <ArrowRight size={20} />
           </button>
         </div>
       </div>
 
-      {/* Scroll Container */}
-      <div 
+      {/* SCROLL CONTAINER */}
+      <div
         ref={scrollRef}
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
-        className="flex gap-4 sm:gap-5 md:gap-6 overflow-x-auto no-scrollbar scroll-smooth px-[clamp(20px,8vw,240px)] touch-pan-x"
-        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        onTouchStart={() => setIsInteracting(true)}
+        onTouchEnd={() =>
+          setTimeout(() => setIsInteracting(false), 1500)
+        }
+        className="flex gap-4 sm:gap-5 md:gap-6 overflow-x-auto no-scrollbar scroll-smooth overscroll-x-contain px-[clamp(20px,8vw,240px)]"
+        style={{
+          scrollbarWidth: "none",
+          msOverflowStyle: "none",
+          touchAction: "auto",
+        }}
       >
         {allServices.map((service, index) => (
           <div
             key={`${service.title}-${index}`}
             className="relative flex-shrink-0 w-[280px] h-[420px] sm:w-[360px] sm:h-[520px] lg:w-[473px] lg:h-[650px] group cursor-pointer overflow-hidden rounded-lg"
           >
-            {/* Background Image */}
             <div className="absolute inset-0 group-hover:scale-[1.03] transition-transform duration-700">
-               <Image 
-                 src={service.image} 
-                 alt={service.title} 
-                 fill 
-                 className="object-cover" 
-               />
+              <Image
+                src={service.image}
+                alt={service.title}
+                fill
+                className="object-cover"
+              />
             </div>
-            
-            {/* Overlay Gradient */}
+
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
-            
-            {/* Text Content Container */}
-            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[220px] lg:w-[292px] z-20 flex flex-col gap-2 text-center text-white">
-              <h3 className="font-heading font-normal text-[22px] lg:text-[28px] leading-[1.2] tracking-[1px] whitespace-nowrap">
+
+            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[220px] lg:w-[292px] z-20 text-center text-white">
+              <h3 className="font-heading text-[22px] lg:text-[28px] whitespace-nowrap">
                 {service.title}
               </h3>
-              <p className="font-sans font-medium text-[14px] lg:text-[16px] leading-[1.1] opacity-90 max-w-[220px] lg:max-w-[292px] mx-auto">
+              <p className="text-[14px] lg:text-[16px] opacity-90 mt-1">
                 {service.subtitle}
               </p>
             </div>

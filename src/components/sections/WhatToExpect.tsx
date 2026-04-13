@@ -41,7 +41,7 @@ export default function WhatToExpect() {
       <div className="max-w-[1440px] mx-auto px-6">
 
         {/* Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_520px] items-center gap-[120px]">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_520px] items-center gap-10 md:gap-[120px]">
 
           {/* LEFT */}
           <div className="flex flex-col gap-[48px] max-w-[560px]">
@@ -98,7 +98,8 @@ export default function WhatToExpect() {
 
           {/* RIGHT IMAGE */}
           <div className="flex justify-end">
-            <div className="relative w-[520px] h-[540px] rounded-[12px] overflow-hidden">
+            <div className="relative w-full max-w-[520px]
+h-[300px] md:h-[540px] rounded-[12px] overflow-hidden">
 
               {/* Smooth fade transition */}
               <motion.div

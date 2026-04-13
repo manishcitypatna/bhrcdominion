@@ -6,7 +6,15 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative h-[1105px] w-full flex items-end justify-center overflow-hidden pt-[139px] pb-[100px]">
+    <section className="
+relative 
+min-h-screen 
+w-full 
+flex items-end justify-center 
+overflow-hidden 
+pt-[100px] md:pt-[139px] 
+pb-[60px] md:pb-[100px]
+">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/0 to-[#EBF5FF]/50 z-10" 
