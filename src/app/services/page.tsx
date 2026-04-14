@@ -1,6 +1,5 @@
 "use client";
 
-import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ServiceSectionCard from "@/components/services/ServiceSectionCard";
 import { servicesData } from "@/data/servicesData";
@@ -9,10 +8,7 @@ import { motion } from "framer-motion";
 
 export default function ServicesPage() {
   return (
-    <div className="bg-bg-light min-h-screen pt-[72px] md:pt-[88px] lg:pt-[108px]">
-
-      {/* NAVBAR */}
-      <Navbar />
+    <div className="bg-bg-light min-h-screen pt-[103px] md:pt-[119px] lg:pt-[139px]">
 
       {/* HERO SECTION */}
 <section className="relative w-full h-[600px] md:h-[700px] overflow-hidden">

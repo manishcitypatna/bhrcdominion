@@ -1,4 +1,3 @@
-import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ConsultationFormSection from "@/components/consultation/ConsultationFormSection";
 
@@ -6,10 +5,8 @@ export default function ConsultationPage() {
   return (
     <div className="bg-white min-h-screen">
 
-      <Navbar />
-
       {/* 🔥 PAGE HEADER (INLINE, SAME AS TREATMENTS STYLE) */}
-      <section className="w-full pt-[140px] md:pt-[180px] pb-[64px] md:pb-[80px]">
+      <section className="w-full pt-[103px] md:pt-[119px] lg:pt-[139px] pb-[64px] md:pb-[80px]">
 
         <div className="max-w-[1440px] mx-auto px-[clamp(20px,8vw,240px)]">
 

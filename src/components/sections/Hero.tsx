@@ -13,7 +13,7 @@ min-h-screen
 w-full 
 flex items-end justify-center 
 overflow-hidden 
-pt-[100px] md:pt-[139px] 
+pt-[103px] md:pt-[119px] lg:pt-[139px]
 pb-[60px] md:pb-[100px]
 ">
       {/* Background Image */}

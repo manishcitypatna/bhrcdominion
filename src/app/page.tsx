@@ -1,5 +1,3 @@
-import TopStrip from "@/components/layout/TopStrip";
-import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
 import BlueBand from "@/components/sections/BlueBand";
@@ -17,8 +15,6 @@ import CTA from "@/components/sections/cta";
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-x-hidden">
-  {/*  <TopStrip />*/}
-      <Navbar />
       <Hero />
       <BlueBand />
       <Services />

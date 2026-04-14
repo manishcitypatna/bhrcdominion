@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FeaturedBlogCard from "@/components/blog/FeaturedBlogCard";
 import BlogGrid from "@/components/blog/BlogGrid";
@@ -22,10 +21,8 @@ export default function BlogsPage() {
   return (
     <div className="bg-bg-light min-h-screen">
 
-      <Navbar />
-
       {/* HEADER */}
-      <section className="w-full pt-[140px] pb-[60px] bg-white">
+      <section className="w-full pt-[103px] md:pt-[119px] lg:pt-[139px] pb-[60px] bg-white">
         <div className="max-w-[1440px] mx-auto px-[clamp(20px,8vw,240px)]">
           <h1 className="text-primary font-heading text-[clamp(48px,6vw,96px)]">
             Blogs

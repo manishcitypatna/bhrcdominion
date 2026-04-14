@@ -22,10 +22,9 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const heroHeight = 1105;
       const scrollY = window.scrollY;
-      const maxOpacity = 0.5;
-      const currentOpacity = Math.min(maxOpacity, (scrollY / heroHeight) * maxOpacity);
+      const maxOpacity = 0.95; // More solid for visibility
+      const currentOpacity = Math.min(maxOpacity, (scrollY / 100) * maxOpacity);
       setOpacity(currentOpacity);
     };
 
@@ -37,7 +36,7 @@ export default function Navbar() {
     <div className="relative" onMouseLeave={() => setActiveMenu(null)}>
       <nav
         className={cn(
-          "fixed top-0 left-0 w-full z-[999] transition-all duration-300 flex items-center justify-between",
+          "fixed top-[31px] left-0 w-full z-[999] transition-all duration-300 flex items-center justify-between",
           "h-[72px] md:h-[88px] lg:h-[108px]",
           "px-5 md:px-[clamp(20px,6vw,80px)] lg:px-[clamp(20px,8vw,240px)]"
         )}

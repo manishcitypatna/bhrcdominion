@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Figtree, DM_Serif_Display } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import TopStrip from "@/components/layout/TopStrip";
+import Navbar from "@/components/layout/Navbar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -31,6 +33,9 @@ const bilagike = localFont({
 export const metadata: Metadata = {
   title: "Beverly Hills Rejuvenation Center",
   description: "Experience the Difference",
+  icons: {
+    icon: "/icons/fevicone.png",
+  },
 };
 
 export default function RootLayout({
@@ -50,6 +55,8 @@ export default function RootLayout({
           overflow-x-hidden
         `}
       >
+        <TopStrip />
+        <Navbar />
         {children}
       </body>
     </html>

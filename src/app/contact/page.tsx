@@ -1,6 +1,5 @@
 "use client";
 
-import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ConsultationFormSection from "@/components/consultation/ConsultationFormSection";
 import LocationCard from "@/components/contact/LocationCard";
@@ -8,9 +7,7 @@ import { Phone, Mail } from "lucide-react";
 
 export default function ContactPage() {
   return (
-    <div className="bg-bg-light min-h-screen pt-[108px]">
-
-      <Navbar />
+    <div className="bg-bg-light min-h-screen pt-[103px] md:pt-[119px] lg:pt-[139px]">
 
       {/* 🔹 HEADER */}
       <section className="w-full bg-white py-[80px]">
