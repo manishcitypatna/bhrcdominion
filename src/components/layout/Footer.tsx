@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, Phone, Mail, Youtube, Facebook, Instagram, X } from "lucide-react";
 
 export default function Footer() {
@@ -12,7 +13,7 @@ export default function Footer() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
-          {/* LEFT - LOGO + CONTACT */}
+          {/* LEFT */}
           <div className="flex flex-col gap-6">
 
             <Image
@@ -47,13 +48,13 @@ export default function Footer() {
             <h4 className="text-white font-medium mb-2">Services</h4>
 
             <ul className="flex flex-col gap-2 text-white/70">
-              <li>Injectables</li>
-              <li>Facial services</li>
-              <li>Skin services</li>
-              <li>Laser treatments</li>
-              <li>Body contouring</li>
-              <li>Regenerative therapies</li>
-              <li>Hormone and wellness therapies</li>
+              <li><Link href="/services/injectables">Injectables</Link></li>
+              <li><Link href="/services/facial">Facial services</Link></li>
+              <li><Link href="/services/skin">Skin services</Link></li>
+              <li><Link href="/services/laser">Laser treatments</Link></li>
+              <li><Link href="/services/body">Body contouring</Link></li>
+              <li><Link href="/services/regenerative">Regenerative therapies</Link></li>
+              <li><Link href="/services/wellness">Hormone and wellness therapies</Link></li>
             </ul>
           </div>
 
@@ -62,13 +63,13 @@ export default function Footer() {
             <h4 className="text-white font-medium mb-2">Quick Links</h4>
 
             <ul className="flex flex-col gap-2 text-white/70">
-              <li>Treatment Categories</li>
-              <li>About Us</li>
-              <li>Blogs</li>
-              <li>Careers</li>
-              <li>Home</li>
-              <li>Privacy Policy</li>
-              <li>Terms & Conditions</li>
+              <li><Link href="/treatments">Treatment Categories</Link></li>
+              <li><Link href="/about">About Us</Link></li>
+              <li><Link href="/blogs">Blogs</Link></li>
+              <li><Link href="/careers">Careers</Link></li>
+              <li><Link href="/">Home</Link></li>
+              <li><Link href="/privacy-policy">Privacy Policy</Link></li>
+              <li><Link href="/terms">Terms & Conditions</Link></li>
             </ul>
           </div>
 
@@ -76,7 +77,6 @@ export default function Footer() {
           <div className="flex flex-col gap-6">
             <h4 className="text-white font-medium">Subscribe Our Newsletter</h4>
 
-            {/* INPUT */}
             <div className="flex items-center border border-white/30 rounded-lg overflow-hidden">
 
               <input
@@ -92,7 +92,6 @@ export default function Footer() {
 
             </div>
 
-            {/* SOCIAL */}
             <div className="flex gap-3">
               {[Youtube, Facebook, Instagram, X].map((Icon, i) => (
                 <div
@@ -107,21 +106,12 @@ export default function Footer() {
 
         </div>
       </div>
-
       {/* BIG BACKGROUND LOGO (FIXED) 
-      <div className="absolute bottom-0 left-0 w-full opacity-[0.06] pointer-events-none">
-
-        <div className="relative w-full h-[180px] md:h-[220px] lg:h-[260px]">
-          <Image
-            src="/images/landing_page/logo/logo_white_footer.png"
-            alt="bg-logo"
-            fill
-            className="object-contain object-bottom scale-110"
-          />
-        </div>
-
+      <div className="absolute bottom-0 left-0 w-full opacity-[0.06] pointer-events-none"> 
+        <div className="relative w-full h-[180px] md:h-[220px] lg:h-[260px]"> 
+          <Image src="/images/landing_page/logo/logo_white_footer.png" alt="bg-logo" fill className="object-contain object-bottom scale-110" /> 
+        </div> 
       </div>*/}
-
     </footer>
   );
 }
