@@ -73,35 +73,86 @@ export const megaMenuData = {
   title: "Treatment Categories",
   columns: [
     {
-      heading: "Upper Face",
+      heading: "Face & Neck",
       items: [
-        "Forehead Treatments",
-        "Eyes Treatments",
-      ],
-    },
-    {
-      heading: "Mid Face",
-      items: [
-        "Nasal Area Treatments",
-        "Cheek Treatments",
-      ],
-    },
-    {
-      heading: "Lower Face",
-      items: [
-        "Lip Treatments",
-        "Mouth Area Treatments",
-        "Jowl Line Treatments",
-        "Chin Treatments",
-      ],
-    },
-    {
-      heading: "Neck",
-      items: [
-        "Neck Treatments",
+        "Forehead",
+        "Eyes",
+        "Nasal Area",
+        "Cheek",
+        "Lip",
+        "Mouth",
+        "Jowl Line",
+        "Chin",
+        "Neck",
       ],
       cta: "Explore more",
     },
+    {
+      heading: "Skin",
+      items: [
+        "Tighten Skin",
+        "Smooth Lines",
+        "Skin Tone",
+        "Pores",
+        "Acne",
+        "Rosacea",
+        "Stretch Marks",
+        "Scars",
+        "Veins",
+        "Anti-Aging",
+        "Birthmarks",
+      ],
+    },
+    {
+      heading: "Body ",
+      items: [
+        "Upper Body",
+        "Midsection",
+        "Lower body",
+        "Body Spasms",
+      ],
+    },
+    {
+      heading: "Internal Wellness",
+      items: [
+        "Migraines",
+        "Hormone Imbalances",
+        "Increase Libido",
+        "Overactive Bladder",
+        "Hot Flashes",
+        "Delay Muscle Soreness",
+        "Regulate Blood Pressure",
+        "Joint Mobility",
+      ],
+    },
+    {
+      heading: "Rejuvenation",
+      items: [
+        "Reduce Facial Wrinkles",
+        "Crows Feet",
+        "Smoker’s Lines",
+        "Hand Wrinkles",
+        "Fuller, Plumper Lips",
+        "Body Contouring",
+        "Lose Weight",
+        "Hair Removal",
+        "Hair Restoration",
+        "Anti-Aging",
+      ],
+    },
+    {
+      heading: "Symptoms",
+      items: [
+        "Weight Gain",
+        "Trouble Sleeping",
+        "Lack of Energy",
+        "Overactive Bladder",
+        "Brain Fog",
+        "Low Libido",
+        "Hot Flashes",
+        "Excessive Sweating",
+      ],
+    }
   ],
 },
 };

@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Blog } from "@/data/blogsData";
@@ -62,19 +62,21 @@ export default function BlogCard({ blog, index }: { blog: Blog; index: number })
         </p>
 
         {/* BUTTON (ALIGNED BOTTOM) */}
-        <button className="
-          mt-auto
-          w-fit 
-          text-[13px] 
-          text-primary 
-          border border-primary/30 
-          px-3 py-1.5 
-          rounded-md 
-          hover:bg-primary hover:text-white 
-          transition
-        ">
+        <Link
+          href={`/blogs/${blog.slug}`}
+          className="
+                    mt-auto
+                    w-fit 
+                    text-[13px] 
+                    text-primary 
+                    border border-primary/30 
+                    px-3 py-1.5 
+                    rounded-md 
+                    hover:bg-primary hover:text-white 
+                    transition
+                  ">
           Read More →
-        </button>
+        </Link>
 
       </div>
 

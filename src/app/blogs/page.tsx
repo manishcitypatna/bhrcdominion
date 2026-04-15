@@ -53,7 +53,6 @@ export default function BlogsPage() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

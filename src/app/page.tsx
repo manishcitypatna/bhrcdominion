@@ -1,4 +1,3 @@
-import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
 import BlueBand from "@/components/sections/BlueBand";
 import Services from "@/components/sections/Services";
@@ -27,7 +26,6 @@ export default function Home() {
       <Awards />
       <Testimonials />
       <CTA />
-      <Footer />
     </main>
   );
 }

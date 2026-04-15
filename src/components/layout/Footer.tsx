@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="relative bg-[#1F3D57] text-white overflow-hidden">
 
       {/* CONTENT */}
-      <div className="relative z-10 max-w-[1440px] mx-auto px-6 py-16 md:py-20">
+      <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-20 xl:px-[240px] py-16 md:py-20">
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 

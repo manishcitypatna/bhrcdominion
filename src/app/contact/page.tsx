@@ -88,8 +88,6 @@ export default function ContactPage() {
 
       {/* REUSED CONSULTATION FORM */}
       <ConsultationFormSection />
-
-      <Footer />
     </div>
   );
 }

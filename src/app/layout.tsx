@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import TopStrip from "@/components/layout/TopStrip";
 import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -58,6 +59,7 @@ export default function RootLayout({
         <TopStrip />
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

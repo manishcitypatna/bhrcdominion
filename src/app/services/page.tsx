@@ -70,9 +70,6 @@ export default function ServicesPage() {
 
       </div>
 
-      {/* FOOTER */}
-      <Footer />
-
     </div>
   );
 }

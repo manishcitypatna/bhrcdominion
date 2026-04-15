@@ -36,8 +36,6 @@ export default function TreatmentsPage() {
       {/* GRID */}
       <TreatmentGrid />
 
-      <Footer />
-
     </div>
   );
 }

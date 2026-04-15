@@ -38,7 +38,7 @@ export default function Navbar() {
         className={cn(
           "fixed top-[31px] left-0 w-full z-[999] transition-all duration-300 flex items-center justify-between",
           "h-[72px] md:h-[88px] lg:h-[108px]",
-          "px-5 md:px-[clamp(20px,6vw,80px)] lg:px-[clamp(20px,8vw,240px)]"
+          "px-6 md:px-20 xl:px-[240px]"
         )}
         style={{
           backgroundColor: `rgba(255, 255, 255, ${opacity})`,
