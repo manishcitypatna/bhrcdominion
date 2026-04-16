@@ -4,18 +4,18 @@ const rejuvenationData = {
   description: "Revitalize your appearance with advanced aesthetic treatments designed to restore youth, texture, and vitality.",
 
   hero: {
-    bgImage: "/images/Face_&_Neck/Face_&_Neck_bg.png",
+    bgImage: "/images/Treatment/Face_&_Neck/Face_&_Neck_bg.png",
     modelImage: "/images/Treatment/Rejuvenation/treatments_Rejuvenation_model.png",
   },
 
   brands: [
-    "/images/Face_&_Neck/brands/01.png",
-    "/images/Face_&_Neck/brands/02.png",
-    "/images/Face_&_Neck/brands/03.png",
-    "/images/Face_&_Neck/brands/04.png",
-    "/images/Face_&_Neck/brands/05.png",
-    "/images/Face_&_Neck/brands/06.png",
-    "/images/Face_&_Neck/brands/07.png",
+    "/images/Treatment/Face_&_Neck/brands/01.png",
+    "/images/Treatment/Face_&_Neck/brands/02.png",
+    "/images/Treatment/Face_&_Neck/brands/03.png",
+    "/images/Treatment/Face_&_Neck/brands/04.png",
+    "/images/Treatment/Face_&_Neck/brands/05.png",
+    "/images/Treatment/Face_&_Neck/brands/06.png",
+    "/images/Treatment/Face_&_Neck/brands/07.png",
   ],
 
   categories: [

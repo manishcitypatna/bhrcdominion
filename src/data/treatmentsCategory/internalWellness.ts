@@ -4,18 +4,18 @@ const internalWellnessData = {
   description: "Restore balance, energy, and vitality with targeted internal wellness treatments designed for long-term health optimization.",
 
   hero: {
-    bgImage: "/images/Face_&_Neck/Face_&_Neck_bg.png",
+    bgImage: "/images/Treatment/Face_&_Neck/Face_&_Neck_bg.png",
     modelImage: "/images/Treatment/Internal_Wellness/treatment_Internal Wellness_model.png",
   },
 
   brands: [
-    "/images/Face_&_Neck/brands/01.png",
-    "/images/Face_&_Neck/brands/02.png",
-    "/images/Face_&_Neck/brands/03.png",
-    "/images/Face_&_Neck/brands/04.png",
-    "/images/Face_&_Neck/brands/05.png",
-    "/images/Face_&_Neck/brands/06.png",
-    "/images/Face_&_Neck/brands/07.png",
+    "/images/Treatment/Face_&_Neck/brands/01.png",
+    "/images/Treatment/Face_&_Neck/brands/02.png",
+    "/images/Treatment/Face_&_Neck/brands/03.png",
+    "/images/Treatment/Face_&_Neck/brands/04.png",
+    "/images/Treatment/Face_&_Neck/brands/05.png",
+    "/images/Treatment/Face_&_Neck/brands/06.png",
+    "/images/Treatment/Face_&_Neck/brands/07.png",
   ],
 
   categories: [
