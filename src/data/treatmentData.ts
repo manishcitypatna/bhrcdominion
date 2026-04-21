@@ -1,6 +1,6 @@
-export const servicesData = [
+export const treatmentsData = [
   {
-    title: "Injectable Services",
+    title: "Injectable Treatment",
     subtitle:
       "Botox, Dysport, Juvederm, Radiesse, Restylane, and Sculptra",
     description:
@@ -11,7 +11,7 @@ export const servicesData = [
   },
 
   {
-    title: "Facial Services",
+    title: "Facial Treatment",
     subtitle: "Hydrafacials, Microneedling, and VI Peel",
     description:
       "Our facial services are designed to rejuvenate and refresh your skin. From deep cleansing to advanced resurfacing, we tailor each treatment to your skin type and goals.",

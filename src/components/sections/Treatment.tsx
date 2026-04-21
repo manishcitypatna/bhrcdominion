@@ -4,14 +4,14 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { useRef, useEffect, useState } from "react";
 
-const services = [
+const treatments = [
   {
-    title: "Injectable Services",
+    title: "Injectable Treatment",
     subtitle: "Botox, Dysport, Juvederm, Radiesse, Restylane, and Sculptra",
     image: "/images/landing_page/our_service/our_service_1.png",
   },
   {
-    title: "Facial Services",
+    title: "Facial Treatment",
     subtitle: "Hydrafacials, Microneedling, and VI Peel",
     image: "/images/landing_page/our_service/our_service_2.png",
   },
@@ -43,9 +43,9 @@ const services = [
 ];
 
 // Duplicate for infinite loop feel
-const allServices = [...services];
+const allTreatments = [...treatments];
 
-export default function Services() {
+export default function Treatment() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const [isPaused, setIsPaused] = useState(false);
@@ -110,7 +110,7 @@ export default function Services() {
       {/* HEADER */}
       <div className="flex justify-between items-center px-[clamp(20px,8vw,240px)] mb-12">
         <h2 className="text-primary text-[clamp(32px,4vw,48px)] font-heading">
-          Our Services
+          Our Treatment
         </h2>
 
         <div className="flex gap-4">
@@ -146,15 +146,15 @@ export default function Services() {
           touchAction: "auto",
         }}
       >
-        {allServices.map((service, index) => (
+        {allTreatments.map((treatment, index) => (
           <div
-            key={`${service.title}-${index}`}
+            key={`${treatment.title}-${index}`}
             className="relative flex-shrink-0 w-[280px] h-[420px] sm:w-[360px] sm:h-[520px] lg:w-[473px] lg:h-[650px] group cursor-pointer overflow-hidden rounded-lg"
           >
             <div className="absolute inset-0 group-hover:scale-[1.03] transition-transform duration-700">
               <Image
-                src={service.image}
-                alt={service.title}
+                src={treatment.image}
+                alt={treatment.title}
                 fill
                 className="object-cover"
               />
@@ -164,10 +164,10 @@ export default function Services() {
 
             <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[220px] lg:w-[292px] z-20 text-center text-white">
               <h3 className="font-heading text-[22px] lg:text-[28px] whitespace-nowrap">
-                {service.title}
+                {treatment.title}
               </h3>
               <p className="text-[14px] lg:text-[16px] opacity-90 mt-1">
-                {service.subtitle}
+                {treatment.subtitle}
               </p>
             </div>
           </div>

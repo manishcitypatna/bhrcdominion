@@ -1,12 +1,12 @@
 "use client";
 
 import Footer from "@/components/layout/Footer";
-import ServiceSectionCard from "@/components/services/ServiceSectionCard";
-import { servicesData } from "@/data/servicesData";
+import TreatmentSectionCard from "@/components/treatment/TreatmentSectionCard";
+import { treatmentsData } from "@/data/treatmentData";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export default function ServicesPage() {
+export default function TreatmentPage() {
   return (
     <div className="bg-bg-light min-h-screen pt-[103px] md:pt-[119px] lg:pt-[139px]">
 
@@ -16,7 +16,7 @@ export default function ServicesPage() {
   {/* BACKGROUND IMAGE */}
   <Image
     src="/images/landing_page/our_service/our_service_1.png"
-    alt="Services Hero"
+    alt="Treatment Hero"
     fill
     priority
     className="object-cover"
@@ -29,8 +29,8 @@ export default function ServicesPage() {
   <div className="
     absolute inset-0 
     flex items-center 
-    max-w-[1440px] mx-auto 
-    px-[clamp(20px,8vw,240px)]
+    max-w-full mx-auto 
+    px-6 md:px-20 xl:px-[240px]
   ">
 
     <motion.h1
@@ -46,25 +46,25 @@ export default function ServicesPage() {
         max-w-[500px]
       "
     >
-      Our Premier Services
+      Our Premier Treatment
     </motion.h1>
 
   </div>
 
 </section>
 
-      {/* 🔥 SERVICES LIST */}
-      <div className="flex flex-col gap-[60px] md:gap-[80px] pb-[80px]">
+      {/* 🔥 TREATMENT LIST */}
+      <div className="flex flex-col gap-[32px] md:gap-[40px] pb-[80px]">
 
-        {servicesData.map((service, index) => (
-          <ServiceSectionCard
+        {treatmentsData.map((treatment, index) => (
+          <TreatmentSectionCard
             key={index}
-            title={service.title}
-            subtitle={service.subtitle}
-            description={service.description}
-            image={service.image}
-            price={service.price}
-            reverse={service.reverse}
+            title={treatment.title}
+            subtitle={treatment.subtitle}
+            description={treatment.description}
+            image={treatment.image}
+            price={treatment.price}
+            reverse={treatment.reverse}
           />
         ))}
 

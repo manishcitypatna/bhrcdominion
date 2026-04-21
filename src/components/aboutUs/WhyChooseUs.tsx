@@ -16,7 +16,7 @@ const items = [
   },
   {
     icon: "/images/aboutUs/whyChooseUs_03.png",
-    title: "Highest Quality Service",
+    title: "Highest Quality Treatment",
     desc: "We use licensed, qualified medical providers to perform procedures.",
   },
 ];

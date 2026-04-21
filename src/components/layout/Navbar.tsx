@@ -9,8 +9,7 @@ import { cn } from "@/lib/utils";
 import MegaMenu from "@/components/navigation/MegaMenu";
 
 const menuItems = [
-  { name: "Treatment Categories", hasDropdown: true },
-  { name: "Services", hasDropdown: true },
+  { name: "Treatment", hasDropdown: true },
   { name: "About Us", hasDropdown: false },
   { name: "Contact Us", hasDropdown: false },
 ];
@@ -64,10 +63,8 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center justify-center gap-8 mx-4">
           {menuItems.map((item) => {
 
-            // FIXED ROUTING (ONLY CHANGE)
             let href = "#";
-            if (item.name === "Services") href = "/services";
-            else if (item.name === "Treatment Categories") href = "/treatments";
+            if (item.name === "Treatment") href = "/treatment";
             else if (item.name === "About Us") href = "/about";
             else if (item.name === "Contact Us") href = "/contact";
 
@@ -76,8 +73,7 @@ export default function Navbar() {
                 key={item.name}
                 className="relative"
                 onMouseEnter={() => {
-                  if (item.name === "Services") setActiveMenu("services");
-                  else if (item.name === "Treatment Categories") setActiveMenu("treatments");
+                  if (item.name === "Treatment") setActiveMenu("treatment");
                   else setActiveMenu(null);
                 }}
               >
@@ -91,12 +87,8 @@ export default function Navbar() {
                 </Link>
 
                 {/* MEGA MENU */}
-                {activeMenu === "services" && item.name === "Services" && (
-                  <MegaMenu type="services" />
-                )}
-
-                {activeMenu === "treatments" && item.name === "Treatment Categories" && (
-                  <MegaMenu type="treatments" />
+                {activeMenu === "treatment" && item.name === "Treatment" && (
+                  <MegaMenu type="treatment" />
                 )}
               </div>
             );
@@ -144,10 +136,8 @@ export default function Navbar() {
             >
               {menuItems.map((item) => {
 
-                // ✅ SAME FIX FOR MOBILE
                 let href = "#";
-                if (item.name === "Services") href = "/services";
-                else if (item.name === "Treatment Categories") href = "/treatments";
+                if (item.name === "Treatment") href = "/treatment";
                 else if (item.name === "About Us") href = "/about";
                 else if (item.name === "Contact Us") href = "/contact";
 

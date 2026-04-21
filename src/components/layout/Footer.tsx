@@ -45,16 +45,16 @@ export default function Footer() {
 
           {/* SERVICES */}
           <div className="flex flex-col gap-4 text-sm">
-            <h4 className="text-white font-medium mb-2">Services</h4>
+            <h4 className="text-white font-medium mb-2">Treatment</h4>
 
             <ul className="flex flex-col gap-2 text-white/70">
-              <li><Link href="/services/injectables">Injectables</Link></li>
-              <li><Link href="/services/facial">Facial services</Link></li>
-              <li><Link href="/services/skin">Skin services</Link></li>
-              <li><Link href="/services/laser">Laser treatments</Link></li>
-              <li><Link href="/services/body">Body contouring</Link></li>
-              <li><Link href="/services/regenerative">Regenerative therapies</Link></li>
-              <li><Link href="/services/wellness">Hormone and wellness therapies</Link></li>
+              <li><Link href="/treatment/injectables">Injectables</Link></li>
+              <li><Link href="/treatment/facial">Facial treatment</Link></li>
+              <li><Link href="/treatment/skin">Skin treatment</Link></li>
+              <li><Link href="/treatment/laser">Laser treatments</Link></li>
+              <li><Link href="/treatment/body">Body contouring</Link></li>
+              <li><Link href="/treatment/regenerative">Regenerative therapies</Link></li>
+              <li><Link href="/treatment/wellness">Hormone and wellness therapies</Link></li>
             </ul>
           </div>
 
@@ -63,7 +63,6 @@ export default function Footer() {
             <h4 className="text-white font-medium mb-2">Quick Links</h4>
 
             <ul className="flex flex-col gap-2 text-white/70">
-              <li><Link href="/treatments">Treatment Categories</Link></li>
               <li><Link href="/about">About Us</Link></li>
               <li><Link href="/blogs">Blogs</Link></li>
               <li><Link href="/careers">Careers</Link></li>

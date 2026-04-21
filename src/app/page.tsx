@@ -1,6 +1,6 @@
 import Hero from "@/components/sections/Hero";
 import BlueBand from "@/components/sections/BlueBand";
-import Services from "@/components/sections/Services";
+import Treatment from "@/components/sections/Treatment";
 import FeatureHighlights from "@/components/sections/FeatureHighlights";
 import LookFeelYounger from "@/components/sections/LookFeelYounger";
 import TrustedByCelebs from "@/components/sections/TrustedByCelebs";
@@ -16,7 +16,7 @@ export default function Home() {
     <main className="relative min-h-screen overflow-x-hidden">
       <Hero />
       <BlueBand />
-      <Services />
+      <Treatment />
       <FeatureHighlights />
       <LookFeelYounger />
       <TrustedByCelebs />

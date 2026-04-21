@@ -37,7 +37,7 @@ const columns: Item[][] = [
     {
       type: "text",
       content:
-        "I've been a loyal client since 2020 and couldn't be happier with the service.",
+        "I've been a loyal client since 2020 and couldn't be happier with the treatment.",
       author: "Scarlett Walt",
       rating: 4,
     },

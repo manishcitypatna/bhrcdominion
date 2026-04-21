@@ -13,7 +13,7 @@ type Props = {
   reverse?: boolean;
 };
 
-export default function ServiceSectionCard({
+export default function TreatmentSectionCard({
   title,
   subtitle,
   description,
@@ -29,7 +29,7 @@ export default function ServiceSectionCard({
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="w-full"
     >
-      <div className="max-w-[1440px] mx-auto px-[clamp(20px,8vw,240px)]">
+      <div className="max-w-full mx-auto px-6 md:px-20 xl:px-[240px]">
 
         <div
           className={`
@@ -37,7 +37,7 @@ export default function ServiceSectionCard({
             ${reverse ? "lg:flex-row-reverse" : ""}
             gap-[40px] lg:gap-[60px]
             bg-white rounded-[8px]
-            p-[24px] md:p-[40px] lg:p-[55px]
+            p-[24px] md:p-[40px] lg:p-[48px]
           `}
         >
 
