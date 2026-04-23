@@ -10,6 +10,7 @@ import MegaMenu from "@/components/navigation/MegaMenu";
 
 const menuItems = [
   { name: "Treatment", hasDropdown: true },
+  { name: "Membership", hasDropdown: false },
   { name: "About Us", hasDropdown: false },
   { name: "Contact Us", hasDropdown: false },
 ];
@@ -64,7 +65,9 @@ export default function Navbar() {
           {menuItems.map((item) => {
 
             let href = "#";
+
             if (item.name === "Treatment") href = "/treatment";
+            else if (item.name === "Membership") href = "/membership";
             else if (item.name === "About Us") href = "/about";
             else if (item.name === "Contact Us") href = "/contact";
 
@@ -138,6 +141,7 @@ export default function Navbar() {
 
                 let href = "#";
                 if (item.name === "Treatment") href = "/treatment";
+                else if (item.name === "Membership") href = "/membership";
                 else if (item.name === "About Us") href = "/about";
                 else if (item.name === "Contact Us") href = "/contact";
 

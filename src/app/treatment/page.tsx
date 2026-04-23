@@ -1,6 +1,5 @@
 "use client";
 
-import Footer from "@/components/layout/Footer";
 import TreatmentSectionCard from "@/components/treatment/TreatmentSectionCard";
 import { treatmentsData } from "@/data/treatmentData";
 import Image from "next/image";
@@ -10,53 +9,48 @@ export default function TreatmentPage() {
   return (
     <div className="bg-bg-light min-h-screen pt-[103px] md:pt-[119px] lg:pt-[139px]">
 
-      {/* HERO SECTION */}
-<section className="relative w-full h-[600px] md:h-[700px] overflow-hidden">
+      {/* ================= HERO SECTION ================= */}
+      <section className="relative w-full h-[600px] md:h-[700px] overflow-hidden">
 
-  {/* BACKGROUND IMAGE */}
-  <Image
-    src="/images/landing_page/our_service/our_service_1.png"
-    alt="Treatment Hero"
-    fill
-    priority
-    className="object-cover"
-  />
+        <Image
+          src="/images/landing_page/our_service/our_service_1.png"
+          alt="Treatment Hero"
+          fill
+          priority
+          className="object-cover"
+        />
 
-  {/* OPTIONAL OVERLAY (softens image like figma) */}
-  <div className="absolute inset-0 bg-white/10" />
+        <div className="absolute inset-0 bg-white/10" />
 
-  {/* TEXT */}
-  <div className="
-    absolute inset-0 
-    flex items-center 
-    max-w-full mx-auto 
-    px-6 md:px-20 xl:px-[240px]
-  ">
+        <div className="
+          absolute inset-0 
+          flex items-center 
+          max-w-full mx-auto 
+          px-6 md:px-20 xl:px-[240px]
+        ">
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="
+              text-primary 
+              font-heading 
+              text-[clamp(48px,6vw,96px)] 
+              leading-[120%] 
+              tracking-[1px]
+              max-w-[500px]
+            "
+          >
+            Our Premier Treatment
+          </motion.h1>
+        </div>
 
-    <motion.h1
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="
-        text-primary 
-        font-heading 
-        text-[clamp(48px,6vw,96px)] 
-        leading-[120%] 
-        tracking-[1px]
-        max-w-[500px]
-      "
-    >
-      Our Premier Treatment
-    </motion.h1>
+      </section>
 
-  </div>
+      {/* ================= TREATMENT LIST ================= */}
+      <section className="flex flex-col gap-[32px] md:gap-[40px] pb-[80px]">
 
-</section>
-
-      {/* 🔥 TREATMENT LIST */}
-      <div className="flex flex-col gap-[32px] md:gap-[40px] pb-[80px]">
-
-        {treatmentsData.map((treatment, index) => (
+        {treatmentsData.map((treatment: any, index: number) => (
           <TreatmentSectionCard
             key={index}
             title={treatment.title}
@@ -65,10 +59,11 @@ export default function TreatmentPage() {
             image={treatment.image}
             price={treatment.price}
             reverse={treatment.reverse}
+            link={treatment.link}
           />
         ))}
 
-      </div>
+      </section>
 
     </div>
   );

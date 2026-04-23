@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -11,6 +12,7 @@ type Props = {
   image: string;
   price?: string;
   reverse?: boolean;
+  link: string;
 };
 
 export default function TreatmentSectionCard({
@@ -20,6 +22,7 @@ export default function TreatmentSectionCard({
   image,
   price,
   reverse = false,
+  link,
 }: Props) {
   return (
     <motion.section
@@ -30,7 +33,6 @@ export default function TreatmentSectionCard({
       className="w-full"
     >
       <div className="max-w-full mx-auto px-6 md:px-20 xl:px-[240px]">
-
         <div
           className={`
             flex flex-col lg:flex-row 
@@ -40,10 +42,8 @@ export default function TreatmentSectionCard({
             p-[24px] md:p-[40px] lg:p-[48px]
           `}
         >
-
           {/* TEXT */}
           <div className="flex-1 flex flex-col justify-center">
-
             <h2 className="text-primary font-heading text-[clamp(28px,3vw,40px)] leading-[120%] mb-[12px]">
               {title}
             </h2>
@@ -56,21 +56,20 @@ export default function TreatmentSectionCard({
               {description}
             </p>
 
-            <button className="flex items-center gap-2 text-primary font-medium group">
-              Learn More
-              <ArrowUpRight
-                size={18}
-                className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
-              />
-            </button>
-
+            <Link href={link}>
+              <button className="flex items-center gap-2 text-primary font-medium group">
+                Learn More
+                <ArrowUpRight
+                  size={18}
+                  className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+                />
+              </button>
+            </Link>
           </div>
 
           {/* IMAGE */}
           <div className="flex-1 relative">
-
             <div className="relative w-full h-[300px] md:h-[400px] lg:h-[420px] rounded-[8px] overflow-hidden">
-
               <Image
                 src={image}
                 alt={title}
@@ -78,19 +77,14 @@ export default function TreatmentSectionCard({
                 className="object-cover transition-transform duration-700 hover:scale-105"
               />
 
-              {/* PRICE STRIP */}
               {price && (
                 <div className="absolute bottom-0 left-0 w-full bg-primary text-white text-center py-[12px] text-sm font-medium">
                   {price}
                 </div>
               )}
-
             </div>
-
           </div>
-
         </div>
-
       </div>
     </motion.section>
   );

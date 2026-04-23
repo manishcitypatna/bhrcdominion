@@ -49,12 +49,12 @@ export default function Footer() {
 
             <ul className="flex flex-col gap-2 text-white/70">
               <li><Link href="/treatment/injectables">Injectables</Link></li>
-              <li><Link href="/treatment/facial">Facial treatment</Link></li>
-              <li><Link href="/treatment/skin">Skin treatment</Link></li>
-              <li><Link href="/treatment/laser">Laser treatments</Link></li>
-              <li><Link href="/treatment/body">Body contouring</Link></li>
-              <li><Link href="/treatment/regenerative">Regenerative therapies</Link></li>
-              <li><Link href="/treatment/wellness">Hormone and wellness therapies</Link></li>
+              <li><Link href="/treatment/skin-rejuvenation">Skin Rejuvenation</Link></li>
+              <li><Link href="/treatment/laser-treatments">Laser Treatments</Link></li>
+              <li><Link href="/treatment/facial-services">Facial Services</Link></li>
+              <li><Link href="/treatment/body-services">Body Services</Link></li>
+              <li><Link href="/treatment/regenerative-therapies">Regenerative Therapies</Link></li>
+              <li><Link href="/treatment/wellness-therapies">Wellness Therapies</Link></li>
             </ul>
           </div>
 
@@ -63,12 +63,13 @@ export default function Footer() {
             <h4 className="text-white font-medium mb-2">Quick Links</h4>
 
             <ul className="flex flex-col gap-2 text-white/70">
-              <li><Link href="/about">About Us</Link></li>
-              <li><Link href="/blogs">Blogs</Link></li>
-              <li><Link href="/careers">Careers</Link></li>
-              <li><Link href="/">Home</Link></li>
-              <li><Link href="/privacy-policy">Privacy Policy</Link></li>
-              <li><Link href="/terms">Terms & Conditions</Link></li>
+              <li><Link href="/treatment/injectables">Injectables</Link></li>
+              <li><Link href="/treatment/skin-rejuvenation">Skin Rejuvenation</Link></li>
+              <li><Link href="/treatment/laser-treatments">Laser Treatments</Link></li>
+              <li><Link href="/treatment/facial-services">Facial Services</Link></li>
+              <li><Link href="/treatment/body-services">Body Services</Link></li>
+              <li><Link href="/treatment/regenerative-therapies">Regenerative Therapies</Link></li>
+              <li><Link href="/treatment/wellness-therapies">Wellness Therapies</Link></li>
             </ul>
           </div>
 

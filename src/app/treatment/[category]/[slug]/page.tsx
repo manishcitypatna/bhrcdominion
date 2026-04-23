@@ -1,53 +1,136 @@
-import { notFound } from "next/navigation";
+"use client";
 
-export default function SubTreatmentPage({
-  params,
-}: {
-  params: { category: string; slug: string };
-}) {
-  const { category, slug } = params;
+import { useParams } from "next/navigation";
+import { treatments } from "@/data/treatments";
+import Image from "next/image";
 
-  // Simple formatting for display
-  const displayCategory = category.replace(/-/g, " ").toUpperCase();
-  const displaySlug = slug.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase());
+export default function TreatmentDetailPage() {
+  const params = useParams();
+
+  const categorySlug = params.category as string;
+  const treatmentSlug = params.slug as string;
+
+  const category = treatments.find(
+    (cat) => cat.slug === categorySlug
+  );
+
+  const treatment = category?.items.find(
+    (item) => item.slug === treatmentSlug
+  );
+
+  if (!category || !treatment) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p className="text-lg text-gray-600">Treatment not found</p>
+      </div>
+    );
+  }
 
   return (
-    <div className="bg-bg-light min-h-screen pt-[120px] pb-[80px]">
-      <div className="max-w-[1440px] mx-auto px-[clamp(20px,8vw,240px)]">
-        <div className="bg-white rounded-[12px] p-[40px] md:p-[60px] shadow-sm border border-gray-100">
-          <nav className="flex gap-2 text-sm text-primary/50 mb-8">
-            <span>Treatment</span>
-            <span>/</span>
-            <span className="capitalize">{displayCategory.toLowerCase()}</span>
-            <span>/</span>
-            <span className="text-primary font-medium">{displaySlug}</span>
-          </nav>
-          
-          <h1 className="text-primary font-heading text-[clamp(32px,5vw,64px)] leading-[1.1] mb-6">
-            {displaySlug}
-          </h1>
-          
-          <div className="prose prose-lg max-w-none text-primary/70">
-            <p className="text-xl mb-8">
-              Experience the best in {displayCategory.toLowerCase()} with our professional {displaySlug} treatments.
-            </p>
-            <p>
-              This is a dedicated page for {displaySlug}. We are currently updating this page with detailed information about the procedure, benefits, and what to expect during your visit.
-            </p>
-            <p>
-              At Beverly Hills Rejuvenation Center, we use the latest technology and expert techniques to ensure you receive the highest quality care and natural-looking results.
-            </p>
-          </div>
+    <div className="bg-bg-light min-h-screen pt-[103px] md:pt-[119px] lg:pt-[139px]">
 
-          <div className="mt-12 p-8 bg-bg-light rounded-[8px] border border-primary/10">
-            <h3 className="text-primary font-semibold text-lg mb-4">Interested in {displaySlug}?</h3>
-            <p className="text-primary/70 mb-6">Schedule a consultation with our specialists to learn if this treatment is right for you.</p>
-            <button className="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary/90 transition-all">
-              Book a Consultation
-            </button>
+      {/* HERO */}
+      <section className="relative w-full aspect-[16/9] max-h-[600px] overflow-hidden">
+        <Image
+          src={treatment.image || category.heroImage}
+          alt={treatment.name}
+          fill
+          className="object-cover"
+        />
+
+        <div className="absolute inset-0 bg-[#1A344D]/60" />
+
+        <div className="absolute inset-0 flex items-center px-6 md:px-20 xl:px-[240px]">
+          <div className="max-w-[700px] text-white">
+            <h1>{treatment.name}</h1>
+            <p className="mt-4">{treatment.shortDescription}</p>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* CONTENT */}
+      <section className="container-custom py-16 md:py-20 space-y-16">
+        {treatment.content?.map((block: any, index: number) => {
+          if (block.type === "overview") {
+            return (
+              <div key={index}>
+                <h2 className="mb-4">{block.title}</h2>
+                <p className="body-md text-primary/70 max-w-[800px]">
+                  {block.text}
+                </p>
+              </div>
+            );
+          }
+
+          if (block.type === "benefits") {
+            return (
+              <div key={index}>
+                <h2 className="mb-6">{block.title}</h2>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {block.items.map((item: string, i: number) => (
+                    <div
+                      key={i}
+                      className="bg-white p-5 rounded-lg border border-gray-100"
+                    >
+                      ✓ {item}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          }
+
+          if (block.type === "how_it_works") {
+            return (
+              <div key={index}>
+                <h2 className="mb-4">{block.title}</h2>
+                <p className="body-md text-primary/70 max-w-[800px]">
+                  {block.text}
+                </p>
+              </div>
+            );
+          }
+
+          if (block.type === "faq") {
+            return (
+              <div key={index}>
+                <h2 className="mb-6">FAQs</h2>
+                <div className="space-y-4">
+                  {block.items.map((faq: any, i: number) => (
+                    <div key={i} className="bg-white border rounded-lg p-5">
+                      <p className="font-medium text-primary">
+                        {faq.question}
+                      </p>
+                      <p className="text-primary/70 mt-2">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          }
+
+          return null;
+        })}
+      </section>
+
+      {/* CTA */}
+      <section className="w-full bg-[#1A344D] py-16 text-center text-white">
+        <h2 className="mb-4">Ready to Get Started?</h2>
+        <p className="mb-6 text-white/80">
+          Book your consultation today and start your journey.
+        </p>
+
+        <a
+          href={treatment.ctaLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-white text-[#1A344D] px-6 py-3 rounded-md font-medium"
+        >
+          Request Consultation
+        </a>
+      </section>
     </div>
   );
 }
