@@ -2,6 +2,7 @@
 
 import { useParams } from "next/navigation";
 import { treatments } from "@/data/treatments";
+import { categories } from "@/data/categories";
 import Image from "next/image";
 
 export default function TreatmentDetailPage() {
@@ -10,15 +11,19 @@ export default function TreatmentDetailPage() {
   const categorySlug = params.category as string;
   const treatmentSlug = params.slug as string;
 
-  const category = treatments.find(
+  const categoryData = treatments.find(
     (cat) => cat.slug === categorySlug
   );
 
-  const treatment = category?.items.find(
+  const categoryInfo = categories.find(
+    (cat) => cat.slug === categorySlug
+  );
+
+  const treatment = categoryData?.items.find(
     (item) => item.slug === treatmentSlug
   );
 
-  if (!category || !treatment) {
+  if (!categoryData || !treatment) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <p className="text-lg text-gray-600">Treatment not found</p>
@@ -32,7 +37,7 @@ export default function TreatmentDetailPage() {
       {/* HERO */}
       <section className="relative w-full aspect-[16/9] max-h-[600px] overflow-hidden">
         <Image
-          src={treatment.image || category.heroImage}
+          src={treatment.image || categoryInfo?.heroImage || "/images/landing_page/our_service/our_service_1.png"}
           alt={treatment.name}
           fill
           className="object-cover"
@@ -123,7 +128,7 @@ export default function TreatmentDetailPage() {
         </p>
 
         <a
-          href={treatment.ctaLink}
+          href="/consultation"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block bg-white text-[#1A344D] px-6 py-3 rounded-md font-medium"
