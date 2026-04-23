@@ -4,8 +4,7 @@ export const categories = [
     title: "Injectables",
     description:
       "Enhance your natural beauty with our advanced injectable treatments designed to smooth wrinkles, restore volume, and refine facial contours with precision.",
-
-    heroImage: "https://secretmedspa.com/wp-content/uploads/Maya-Edited.png",
+    heroImage: "/images/landing_page/our_service/our_service_1.png",
   },
 
   {
@@ -13,8 +12,7 @@ export const categories = [
     title: "Skin Rejuvenation",
     description:
       "Revitalize your skin with cutting-edge treatments that improve texture, tone, and overall radiance while stimulating natural collagen production.",
-
-    heroImage: "/images/treatments/skin/hero.png",
+    heroImage: "/images/landing_page/our_service/our_service_2.png",
   },
 
   {
@@ -22,8 +20,7 @@ export const categories = [
     title: "Laser Treatments",
     description:
       "Experience advanced laser technologies for skin resurfacing, hair removal, and targeted treatments that deliver visible, long-lasting results.",
-
-    heroImage: "/images/treatments/laser/hero.png",
+    heroImage: "/images/landing_page/our_service/our_service_3.png",
   },
 
   {
@@ -31,8 +28,7 @@ export const categories = [
     title: "Facial Services",
     description:
       "Customized facial treatments tailored to cleanse, hydrate, and rejuvenate your skin for a refreshed and glowing appearance.",
-
-    heroImage: "/images/treatments/facial/hero.png",
+    heroImage: "/images/landing_page/our_service/our_service_4.png",
   },
 
   {
@@ -40,8 +36,7 @@ export const categories = [
     title: "Body Services",
     description:
       "Sculpt, tone, and enhance your body with non-invasive treatments designed to deliver natural-looking results with minimal downtime.",
-
-    heroImage: "/images/treatments/body/hero.png",
+    heroImage: "/images/landing_page/our_service/our_service_1.png",
   },
 
   {
@@ -49,8 +44,7 @@ export const categories = [
     title: "Regenerative Therapies",
     description:
       "Harness your body’s natural healing power with advanced regenerative treatments that promote repair, rejuvenation, and long-term wellness.",
-
-    heroImage: "/images/treatments/regenerative/hero.png",
+    heroImage: "/images/landing_page/our_service/our_service_2.png",
   },
 
   {
@@ -58,8 +52,7 @@ export const categories = [
     title: "Wellness Therapies",
     description:
       "Optimize your health and energy with personalized wellness programs designed to support long-term vitality and overall well-being.",
-
-    heroImage: "/images/treatments/wellness/hero.png",
+    heroImage: "/images/landing_page/our_service/our_service_3.png",
   },
 
   {
@@ -67,6 +60,6 @@ export const categories = [
     title: "Specials",
     description:
       "Take advantage of our exclusive offers and memberships designed to help you achieve your aesthetic goals while enjoying premium benefits.",
-    heroImage: "/images/treatments/regenerative/hero.png",
+    heroImage: "/images/landing_page/our_service/our_service_4.png",
   },
 ];
