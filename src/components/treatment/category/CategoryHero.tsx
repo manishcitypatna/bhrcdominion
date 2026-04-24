@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 type Props = {
   title: string;
   description: string;
@@ -7,14 +9,26 @@ type Props = {
 
 export default function CategoryHero({ title, description }: Props) {
   return (
-    <section className="text-center py-[80px] md:py-[100px] px-6">
-      <h1 className="text-primary font-heading text-[clamp(36px,5vw,64px)] mb-4">
-        {title}
-      </h1>
+    <section className="text-center py-[100px] md:py-[140px] px-6 bg-secondry">
+      <div className="max-w-[1000px] mx-auto">
+        <motion.h1 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-primary mb-6"
+        >
+          {title}
+        </motion.h1>
 
-      <p className="text-primary/70 max-w-[720px] mx-auto text-[15px] leading-[160%]">
-        {description}
-      </p>
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          className="subtitle-1 max-w-[720px] mx-auto"
+        >
+          {description}
+        </motion.p>
+      </div>
     </section>
   );
 }

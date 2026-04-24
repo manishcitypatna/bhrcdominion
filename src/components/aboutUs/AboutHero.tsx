@@ -5,22 +5,24 @@ import { motion } from "framer-motion";
 
 export default function AboutHero() {
   return (
-    <section className="relative w-full h-[700px] bg-white overflow-hidden">
+    <section className="relative w-full h-[600px] md:h-[700px] bg-white overflow-hidden">
       
       <Image
         src="/images/aboutUs/0001.png"
         alt="About Hero"
         fill
         priority
-        className="object-cover object-center -mt-[1px]"
+        className="object-cover object-center"
       />
 
-      <div className="absolute top-[64px] left-1/2 -translate-x-1/2 z-10">
+      <div className="absolute inset-0 bg-black/10 z-[5]" />
+
+      <div className="absolute inset-0 flex items-center justify-center z-10 px-6">
         <motion.h1
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-primary font-heading text-[64px] leading-[120%]"
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-white drop-shadow-lg"
         >
           About Us
         </motion.h1>

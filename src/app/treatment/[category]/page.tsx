@@ -6,7 +6,7 @@ import { treatments } from "@/data/treatments";
 
 import CategoryHero from "@/components/treatment/category/CategoryHero";
 import TreatmentGrid from "@/components/treatment/category/TreatmentGrid";
-import CategoryCTA from "@/components/treatment/category/CategoryCTA";
+import CTA from "@/components/sections/cta";
 
 export default function CategoryPage() {
   const params = useParams();
@@ -32,7 +32,7 @@ export default function CategoryPage() {
         categorySlug={categorySlug}
       />
 
-      <CategoryCTA />
+      <CTA />
 
     </div>
   );

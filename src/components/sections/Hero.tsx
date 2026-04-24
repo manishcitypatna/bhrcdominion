@@ -9,60 +9,64 @@ export default function Hero() {
   return (
     <section className="
 relative 
-min-h-screen 
 w-full 
+h-[50vw] md:h-[90vh]
 flex items-end justify-center 
 overflow-hidden 
-pt-[103px] md:pt-[119px] lg:pt-[139px]
-pb-[60px] md:pb-[100px]
+mt-[103px] md:mt-0
+pt-0 md:pt-[139px]
+pb-2 md:pb-12
 ">
-      {/* Background Image */}
+
+      {/* Background */}
       <div className="absolute inset-0 z-0">
-        <div 
-          className="absolute inset-0 bg-gradient-to-b from-transparent via-white/0 to-[#EBF5FF]/50 z-10"
-          style={{ 
-            background: "linear-gradient(180deg, rgba(255,255,255,0) 44%, rgba(235,245,255,0.5) 91%)" 
-          }} 
+        <div
+          className="absolute inset-0 z-10"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(255,255,255,0) 44%, rgba(235,245,255,0.5) 91%)"
+          }}
         />
-        <Image 
-          src="/images/landing_page/hero_banner/hero_banner.png" 
-          alt="Beverly Hills Rejuvenation Center Hero" 
-          fill 
-          className="object-cover" 
-          priority 
+        <Image
+          src="/images/landing_page/hero_banner/hero_banner.png"
+          alt="Hero"
+          fill
+          className="object-cover"
+          priority
         />
       </div>
 
       {/* Content */}
-      <div className="relative z-20 container-custom text-center mb-[150px]">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex flex-col items-center"
-        >
-          <h1 className="text-primary mb-12 tracking-tight">
-            Experience the Difference
-          </h1>
-          
-          {/* ✅ UPDATED BUTTON */}
+      <div className="relative z-20 w-full flex flex-col items-center">
+
+        {/* ✅ FULL-WIDTH HEADING (NO CONTAINER) */}
+        <h1 className="hero-title text-primary">
+          Experience the Difference
+        </h1>
+
+        {/* ✅ BUTTON IN CONTAINER */}
+        <div className="w-full md:container-custom flex justify-center mt-1 md:mt-6">
           <Link href="/consultation">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
-              className="group flex items-center gap-2 text-bg-light font-medium text-lg transition-all"
+              className="
+                group flex items-center gap-2 
+                font-medium 
+                text-primary
+                text-[3vw] md:text-lg
+                transition-all
+              "
             >
-              <span className="text-primary">
-                Request a Consultation
-              </span>
-              <ArrowUpRight 
-                size={20} 
-                className="text-bg-light group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-primary"
+              <span>Request a Consultation</span>
+              <ArrowUpRight
+                size={16}
+                className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
               />
             </motion.button>
           </Link>
+        </div>
 
-        </motion.div>
       </div>
     </section>
   );

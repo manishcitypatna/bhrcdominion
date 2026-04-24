@@ -90,9 +90,9 @@ export default function Treatment() {
 
     let cardWidth = 473;
     if (!isDesktop && isTablet) cardWidth = 360;
-    if (!isTablet) cardWidth = 280;
+    if (!isTablet) cardWidth = 220;
 
-    const gap = isDesktop ? 24 : isTablet ? 20 : 16;
+    const gap = isDesktop ? 24 : isTablet ? 20 : 12;
 
     const scrollAmount = (cardWidth + gap) * 1.5;
 
@@ -139,7 +139,7 @@ export default function Treatment() {
         onTouchEnd={() =>
           setTimeout(() => setIsInteracting(false), 1500)
         }
-        className="flex gap-4 sm:gap-5 md:gap-6 overflow-x-auto no-scrollbar scroll-smooth overscroll-x-contain px-[clamp(20px,8vw,240px)]"
+        className="flex gap-3 sm:gap-5 md:gap-6 overflow-x-auto no-scrollbar scroll-smooth overscroll-x-contain px-[clamp(20px,8vw,240px)]"
         style={{
           scrollbarWidth: "none",
           msOverflowStyle: "none",
@@ -149,7 +149,7 @@ export default function Treatment() {
         {allTreatments.map((treatment, index) => (
           <div
             key={`${treatment.title}-${index}`}
-            className="relative flex-shrink-0 w-[280px] h-[420px] sm:w-[360px] sm:h-[520px] lg:w-[473px] lg:h-[650px] group cursor-pointer overflow-hidden rounded-lg"
+            className="relative flex-shrink-0 w-[220px] h-[330px] sm:w-[360px] sm:h-[520px] lg:w-[473px] lg:h-[650px] group cursor-pointer overflow-hidden rounded-lg"
           >
             <div className="absolute inset-0 group-hover:scale-[1.03] transition-transform duration-700">
               <Image

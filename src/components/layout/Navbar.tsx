@@ -15,15 +15,27 @@ const menuItems = [
   { name: "Contact Us", hasDropdown: false },
 ];
 
+const treatmentCategories = [
+  { name: "Injectables", slug: "injectables" },
+  { name: "Skin Rejuvenation", slug: "skin-rejuvenation" },
+  { name: "Laser Treatments", slug: "laser-treatments" },
+  { name: "Facial Services", slug: "facial-services" },
+  { name: "Body Services", slug: "body-services" },
+  { name: "Regenerative Therapies", slug: "regenerative-therapies" },
+  { name: "Wellness Therapies", slug: "wellness-therapies" },
+  { name: "Specials", slug: "specials" },
+];
+
 export default function Navbar() {
   const [opacity, setOpacity] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [isTreatmentOpen, setIsTreatmentOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const maxOpacity = 0.95; // More solid for visibility
+      const maxOpacity = 0.95;
       const currentOpacity = Math.min(maxOpacity, (scrollY / 100) * maxOpacity);
       setOpacity(currentOpacity);
     };
@@ -43,10 +55,10 @@ export default function Navbar() {
         style={{
           backgroundColor: `rgba(255, 255, 255, ${opacity})`,
           backdropFilter: opacity > 0 ? "blur(6px)" : "none",
-          WebkitBackdropFilter: opacity > 0 ? "blur(8px)" : "none"
+          WebkitBackdropFilter: opacity > 0 ? "blur(8px)" : "none",
         }}
       >
-        {/* Logo */}
+        {/* LOGO */}
         <div className="flex-1 flex justify-start">
           <Link href="/" className="relative flex items-center shrink-0">
             <div className="relative w-[clamp(160px,20vw,308px)] aspect-[308/48]">
@@ -60,10 +72,9 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Menu */}
+        {/* DESKTOP MENU */}
         <div className="hidden lg:flex items-center justify-center gap-8 mx-4">
           {menuItems.map((item) => {
-
             let href = "#";
 
             if (item.name === "Treatment") href = "/treatment";
@@ -86,10 +97,11 @@ export default function Navbar() {
                   style={{ color: "rgba(26, 52, 77, 0.65)" }}
                 >
                   {item.name}
-                  {item.hasDropdown && <ChevronDown size={14} className="opacity-50" />}
+                  {item.hasDropdown && (
+                    <ChevronDown size={14} className="opacity-50" />
+                  )}
                 </Link>
 
-                {/* MEGA MENU */}
                 {activeMenu === "treatment" && item.name === "Treatment" && (
                   <MegaMenu type="treatment" />
                 )}
@@ -98,10 +110,9 @@ export default function Navbar() {
           })}
         </div>
 
-        {/* Right side */}
+        {/* RIGHT SIDE */}
         <div className="flex-1 flex justify-end">
           <div className="hidden lg:flex items-center gap-4">
-
             <a
               href="tel:4805550103"
               className="px-6 py-2.5 border border-primary/20 text-primary rounded-lg text-sm font-medium hover:bg-primary/5 transition-colors whitespace-nowrap"
@@ -116,10 +127,9 @@ export default function Navbar() {
               Request Consultation
               <ArrowUpRight size={18} />
             </Link>
-
           </div>
 
-          {/* Mobile toggle */}
+          {/* MOBILE TOGGLE */}
           <button
             className="lg:hidden text-primary p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -128,7 +138,7 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile menu */}
+        {/* MOBILE MENU */}
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
@@ -138,13 +148,76 @@ export default function Navbar() {
               className="absolute top-full left-0 w-full bg-white shadow-xl py-8 px-6 lg:hidden flex flex-col gap-6"
             >
               {menuItems.map((item) => {
-
                 let href = "#";
-                if (item.name === "Treatment") href = "/treatment";
-                else if (item.name === "Membership") href = "/membership";
+                if (item.name === "Membership") href = "/membership";
                 else if (item.name === "About Us") href = "/about";
                 else if (item.name === "Contact Us") href = "/contact";
 
+                // ✅ TREATMENT (CLICKABLE + ACCORDION)
+                if (item.name === "Treatment") {
+                  return (
+                    <div
+                      key={item.name}
+                      className="border-b border-gray-100 pb-2"
+                    >
+                      <div className="flex justify-between items-center">
+                        
+                        {/* CLICKABLE TEXT */}
+                        <Link
+                          href="/treatment"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="text-lg font-medium text-text-dark"
+                        >
+                          Treatment
+                        </Link>
+
+                        {/* TOGGLE ICON */}
+                        <button
+                          onClick={() =>
+                            setIsTreatmentOpen(!isTreatmentOpen)
+                          }
+                          className="p-1"
+                        >
+                          <ChevronDown
+                            size={18}
+                            className={`transition-transform ${
+                              isTreatmentOpen ? "rotate-180" : ""
+                            }`}
+                          />
+                        </button>
+
+                      </div>
+
+                      {/* DROPDOWN */}
+                      <AnimatePresence>
+                        {isTreatmentOpen && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.25 }}
+                            className="flex flex-col gap-3 mt-3 pl-2"
+                          >
+                            {treatmentCategories.map((cat) => (
+                              <Link
+                                key={cat.slug}
+                                href={`/treatment/${cat.slug}`}
+                                onClick={() =>
+                                  setIsMobileMenuOpen(false)
+                                }
+                                className="text-sm text-text-dark/70 hover:text-primary transition"
+                              >
+                                {cat.name}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  );
+                }
+
+                // ✅ NORMAL LINKS
                 return (
                   <Link
                     key={item.name}
@@ -157,8 +230,8 @@ export default function Navbar() {
                 );
               })}
 
+              {/* BUTTONS */}
               <div className="flex flex-col gap-4 pt-4">
-
                 <a
                   href="tel:4805550103"
                   className="w-full py-3 border border-primary text-primary rounded-md text-center font-medium"
@@ -174,7 +247,6 @@ export default function Navbar() {
                   Request a Consultation
                   <ArrowUpRight size={16} />
                 </Link>
-
               </div>
             </motion.div>
           )}

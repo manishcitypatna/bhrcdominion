@@ -166,17 +166,23 @@ export default function LookFeelYounger() {
           );
         })}
 
-        {/* BUTTON */}
-        <div className="absolute bottom-[24px] left-1/2 -translate-x-1/2 z-20">
+        {/* BUTTON - Desktop */}
+        <div className="hidden md:block absolute bottom-[24px] left-1/2 -translate-x-1/2 z-20">
           <button className="flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white rounded-md font-medium transition-all duration-300 hover:bg-primary/90 hover:scale-[1.02] active:scale-[0.98]">
             Download Brochure
-
           </button>
         </div>
 
       </div>
 
-      <div className="h-[80px]" />
+      {/* BUTTON - Mobile */}
+      <div className="md:hidden w-full px-6 mt-6">
+        <button className="w-full flex items-center justify-center gap-2 py-4 bg-primary text-white rounded-md font-medium transition-all duration-300 active:scale-[0.98]">
+          Download Brochure
+        </button>
+      </div>
+
+      <div className="h-[40px] md:h-[80px]" />
 
       {/* ANIMATIONS */}
       <style jsx>{`
