@@ -7,6 +7,7 @@ import { Menu, X, ChevronDown, ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import MegaMenu from "@/components/navigation/MegaMenu";
+import { LANDING_PAGE_IMAGES } from "../../../public/images/landingPageImages";
 
 const menuItems = [
   { name: "Treatment", hasDropdown: true },
@@ -48,9 +49,8 @@ export default function Navbar() {
     <div className="relative" onMouseLeave={() => setActiveMenu(null)}>
       <nav
         className={cn(
-          "fixed top-[31px] left-0 w-full z-[999] transition-all duration-300 flex items-center justify-between",
-          "h-[72px] md:h-[88px] lg:h-[108px]",
-          "px-6 md:px-20 xl:px-[240px]"
+          "fixed top-[31px] left-0 w-full z-[999] transition-all duration-300 flex items-center",
+          "h-[72px] md:h-[88px] lg:h-[108px]"
         )}
         style={{
           backgroundColor: `rgba(255, 255, 255, ${opacity})`,
@@ -58,84 +58,86 @@ export default function Navbar() {
           WebkitBackdropFilter: opacity > 0 ? "blur(8px)" : "none",
         }}
       >
-        {/* LOGO */}
-        <div className="flex-1 flex justify-start">
-          <Link href="/" className="relative flex items-center shrink-0">
-            <div className="relative w-[clamp(160px,20vw,308px)] aspect-[308/48]">
-              <Image
-                src="/images/landing_page/logo/logo_blue.png"
-                alt="Beverly Hills Rejuvenation Center"
-                fill
-                className="object-contain object-left"
-              />
-            </div>
-          </Link>
-        </div>
-
-        {/* DESKTOP MENU */}
-        <div className="hidden lg:flex items-center justify-center gap-8 mx-4">
-          {menuItems.map((item) => {
-            let href = "#";
-
-            if (item.name === "Treatment") href = "/treatment";
-            else if (item.name === "Membership") href = "/membership";
-            else if (item.name === "About Us") href = "/about";
-            else if (item.name === "Contact Us") href = "/contact";
-
-            return (
-              <div
-                key={item.name}
-                className="relative"
-                onMouseEnter={() => {
-                  if (item.name === "Treatment") setActiveMenu("treatment");
-                  else setActiveMenu(null);
-                }}
-              >
-                <Link
-                  href={href}
-                  className="flex items-center gap-1 text-[15px] font-medium whitespace-nowrap"
-                  style={{ color: "rgba(26, 52, 77, 0.65)" }}
-                >
-                  {item.name}
-                  {item.hasDropdown && (
-                    <ChevronDown size={14} className="opacity-50" />
-                  )}
-                </Link>
-
-                {activeMenu === "treatment" && item.name === "Treatment" && (
-                  <MegaMenu type="treatment" />
-                )}
+        <div className="container-custom flex items-center justify-between h-full">
+          {/* LOGO */}
+          <div className="flex justify-start">
+            <Link href="/" className="relative flex items-center shrink-0">
+              <div className="relative w-[clamp(160px,20vw,308px)] aspect-[308/48]">
+                <Image
+                  src={LANDING_PAGE_IMAGES.LOGOS.BLUE}
+                  alt="Beverly Hills Rejuvenation Center"
+                  fill
+                  className="object-contain object-left"
+                />
               </div>
-            );
-          })}
-        </div>
-
-        {/* RIGHT SIDE */}
-        <div className="flex-1 flex justify-end">
-          <div className="hidden lg:flex items-center gap-4">
-            <a
-              href="tel:4805550103"
-              className="px-6 py-2.5 border border-primary/20 text-primary rounded-lg text-sm font-medium hover:bg-primary/5 transition-colors whitespace-nowrap"
-            >
-              (210)-888-8889
-            </a>
-
-            <Link
-              href="/consultation"
-              className="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-primary/90 transition-all shadow-lg shadow-primary/10 whitespace-nowrap"
-            >
-              Request Consultation
-              <ArrowUpRight size={18} />
             </Link>
           </div>
 
-          {/* MOBILE TOGGLE */}
-          <button
-            className="lg:hidden text-primary p-2"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+          {/* DESKTOP MENU */}
+          <div className="hidden lg:flex items-center justify-center gap-10 mx-6">
+            {menuItems.map((item) => {
+              let href = "#";
+
+              if (item.name === "Treatment") href = "/treatment";
+              else if (item.name === "Membership") href = "/membership";
+              else if (item.name === "About Us") href = "/about";
+              else if (item.name === "Contact Us") href = "/contact";
+
+              return (
+                <div
+                  key={item.name}
+                  className="relative"
+                  onMouseEnter={() => {
+                    if (item.name === "Treatment") setActiveMenu("treatment");
+                    else setActiveMenu(null);
+                  }}
+                >
+                  <Link
+                    href={href}
+                    className="flex items-center gap-1 text-[15px] font-medium whitespace-nowrap"
+                    style={{ color: "rgba(26, 52, 77, 0.65)" }}
+                  >
+                    {item.name}
+                    {item.hasDropdown && (
+                      <ChevronDown size={14} className="opacity-50" />
+                    )}
+                  </Link>
+
+                  {activeMenu === "treatment" && item.name === "Treatment" && (
+                    <MegaMenu type="treatment" />
+                  )}
+                </div>
+              );
+            })}
+          </div>
+
+          {/* RIGHT SIDE */}
+          <div className="flex justify-end">
+            <div className="hidden lg:flex items-center gap-4">
+              <a
+                href="tel:4805550103"
+                className="px-6 py-2.5 border border-primary/20 text-primary rounded-lg text-sm font-medium hover:bg-primary/5 transition-colors whitespace-nowrap"
+              >
+                (210)-888-8889
+              </a>
+
+              <Link
+                href="/consultation"
+                className="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-primary/90 transition-all shadow-lg shadow-primary/10 whitespace-nowrap"
+              >
+                Request Consultation
+                <ArrowUpRight size={18} />
+              </Link>
+            </div>
+
+            {/* MOBILE TOGGLE */}
+            <button
+              className="lg:hidden text-primary p-2"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
         </div>
 
         {/* MOBILE MENU */}

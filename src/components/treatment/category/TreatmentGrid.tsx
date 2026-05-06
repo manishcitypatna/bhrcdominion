@@ -9,7 +9,7 @@ type Props = {
 
 export default function TreatmentGrid({ items, categorySlug }: Props) {
   return (
-    <section className="px-6 md:px-20 xl:px-[240px] pb-[80px]">
+    <section className="container-custom pb-[80px]">
 
       <div className="
   grid 

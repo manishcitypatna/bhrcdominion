@@ -2,12 +2,13 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { LANDING_PAGE_IMAGES } from "../../../public/images/landingPageImages";
 
 const awards = [
-  { name: "Aspire Presidential Champion", logo: "/images/landing_page/Awards_&_Recognition/Awards_&_Recognition_1.png" },
-  { name: "Inc 500", logo: "/images/landing_page/Awards_&_Recognition/Awards_&_Recognition_2.png" },
-  { name: "Top 500 Proud Member", logo: "/images/landing_page/Awards_&_Recognition/Awards_&_Recognition_3.png" },
-  { name: "Award 4", logo: "/images/landing_page/Awards_&_Recognition/Awards_&_Recognition_4.png" },
+  { name: "Aspire Presidential Champion", logo: LANDING_PAGE_IMAGES.AWARDS.AWARD_1 },
+  { name: "Inc 500", logo: LANDING_PAGE_IMAGES.AWARDS.AWARD_2 },
+  { name: "Top 500 Proud Member", logo: LANDING_PAGE_IMAGES.AWARDS.AWARD_3 },
+  { name: "Award 4", logo: LANDING_PAGE_IMAGES.AWARDS.AWARD_4 },
 ];
 
 export default function Awards() {

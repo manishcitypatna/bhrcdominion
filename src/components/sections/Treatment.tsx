@@ -3,42 +3,43 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { useRef, useEffect, useState } from "react";
+import { LANDING_PAGE_IMAGES } from "../../../public/images/landingPageImages";
 
 const treatments = [
   {
     title: "Injectable Treatment",
     subtitle: "Botox, Dysport, Juvederm, Radiesse, Restylane, and Sculptra",
-    image: "/images/landing_page/our_service/our_service_1.png",
+    image: LANDING_PAGE_IMAGES.TREATMENT.SERVICE_1,
   },
   {
     title: "Facial Treatment",
     subtitle: "Hydrafacials, Microneedling, and VI Peel",
-    image: "/images/landing_page/our_service/our_service_2.png",
+    image: LANDING_PAGE_IMAGES.TREATMENT.SERVICE_2,
   },
   {
     title: "Skin Rejuvenation",
     subtitle: "CO2 Laser, PDO Threads, PRP Facial, and ZO Skin Health",
-    image: "/images/landing_page/our_service/our_service_3.png",
+    image: LANDING_PAGE_IMAGES.TREATMENT.SERVICE_3,
   },
   {
     title: "Laser Hair Removal",
     subtitle: "Professional Hair Removal featuring Soprano technology",
-    image: "/images/landing_page/our_service/our_service_4.png",
+    image: LANDING_PAGE_IMAGES.TREATMENT.SERVICE_4,
   },
   {
     title: "Body Contouring",
     subtitle: "Sculptra Butt Lift, EmSculpt, and Kybella",
-    image: "/images/landing_page/our_service/our_service_1.png",
+    image: LANDING_PAGE_IMAGES.TREATMENT.SERVICE_1,
   },
   {
     title: "Regenerative Therapies",
     subtitle: "Morpheus8, Hair Restoration, and SkinPen Microneedling",
-    image: "/images/landing_page/our_service/our_service_2.png",
+    image: LANDING_PAGE_IMAGES.TREATMENT.SERVICE_2,
   },
   {
     title: "Wellness Therapies",
     subtitle: "Medical Weight Loss featuring Semaglutide and Tirzepatide",
-    image: "/images/landing_page/our_service/our_service_3.png",
+    image: LANDING_PAGE_IMAGES.TREATMENT.SERVICE_3,
   },
 ];
 
@@ -108,7 +109,7 @@ export default function Treatment() {
     <section className="relative w-full max-w-[1920px] mx-auto py-[120px] bg-white overflow-hidden">
       
       {/* HEADER */}
-      <div className="flex justify-between items-center px-[clamp(20px,8vw,240px)] mb-12">
+      <div className="flex justify-between items-center container-custom mb-12">
         <h2 className="text-primary text-[clamp(32px,4vw,48px)] font-heading">
           Our Treatment
         </h2>
@@ -139,7 +140,7 @@ export default function Treatment() {
         onTouchEnd={() =>
           setTimeout(() => setIsInteracting(false), 1500)
         }
-        className="flex gap-3 sm:gap-5 md:gap-6 overflow-x-auto no-scrollbar scroll-smooth overscroll-x-contain px-[clamp(20px,8vw,240px)]"
+        className="flex gap-3 sm:gap-5 md:gap-6 overflow-x-auto no-scrollbar scroll-smooth overscroll-x-contain container-custom"
         style={{
           scrollbarWidth: "none",
           msOverflowStyle: "none",

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { LANDING_PAGE_IMAGES } from "../../../public/images/landingPageImages";
 
 type ActiveDot = {
   id: number;
@@ -94,7 +95,7 @@ export default function LookFeelYounger() {
 
         {/* Image */}
         <Image
-          src="/images/landing_page/look_feel_younger/look&feel_younger.png"
+          src={LANDING_PAGE_IMAGES.LOOK_FEEL_YOUNGER.MAIN}
           alt=""
           fill
           className="object-contain"

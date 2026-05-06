@@ -2,9 +2,9 @@ export const botox = {
   "slug": "botox",
   "hero": {
     "title": "Botox",
-    "description": "Smooth fine lines and restore a refreshed, youthful appearance with precision Botox treatments tailored to your facial anatomy.",
-    "bgImage": "/images/landing_page/our_service/our_service_1.png",
-    "modelImage": "/images/landing_page/our_service/our_service_2.png",
+    "description": "Botox San Antonio Texas is a safe and effective solution for those with mild-to-moderate frown lines between their eyebrows, crow’s feet around their eyes, vertical forehead creases, and other moderate to severe facial wrinkles.",
+    "bgImage": "/images/landing_page_01/seeTheDifference/seeTheDifference_bg.png",
+    "modelImage": "/images/treatments/injectables/injectable_info_005.png",
     "cta": "Request Consultation",
     "breadcrumb": ["Home", "Treatment", "Injectables", "Botox"]
   },
@@ -17,7 +17,7 @@ export const botox = {
   "details": {
     "title": "How Does Botox Work?",
     "description": "Botox works by temporarily relaxing targeted facial muscles responsible for dynamic wrinkles. By limiting repetitive muscle movement, it smooths existing lines while preventing deeper wrinkles from forming over time.",
-    "image": "/images/landing_page/our_service/our_service_3.png",
+    "image": "/images/landing_page_01/our_service/our_service_3.png",
     "cta": {
       "label": "Read More",
       "link": "/blog/how-botox-works"
@@ -30,17 +30,17 @@ export const botox = {
       {
         "title": "Fine Line Reduction",
         "description": "Perfect for softening crow’s feet, forehead lines, and frown lines.",
-        "image": "/images/landing_page/our_service/our_service_4.png"
+        "image": "/images/landing_page_01/our_service/our_service_4.png"
       },
       {
         "title": "Preventative Care",
         "description": "Helps delay the formation of deeper wrinkles over time.",
-        "image": "/images/landing_page/our_service/our_service_1.png"
+        "image": "/images/landing_page_01/our_service/our_service_1.png"
       },
       {
         "title": "Natural Results Seekers",
         "description": "Designed for those who want a refreshed look without appearing overdone.",
-        "image": "/images/landing_page/our_service/our_service_2.png"
+        "image": "/images/landing_page_01/our_service/our_service_2.png"
       }
     ]
   },
@@ -51,24 +51,24 @@ export const botox = {
       {
         "title": "Consultation",
         "description": "Your provider evaluates facial structure and movement patterns.",
-        "image": "/images/landing_page/our_service/our_service_3.png"
+        "image": "/images/landing_page_01/our_service/our_service_3.png"
       },
       {
         "title": "Targeted Injection",
         "description": "Botox is administered into specific muscles using fine needles.",
-        "image": "/images/landing_page/our_service/our_service_4.png"
+        "image": "/images/landing_page_01/our_service/our_service_4.png"
       },
       {
         "title": "Gradual Results",
         "description": "Results appear within days, revealing smoother skin.",
-        "image": "/images/landing_page/our_service/our_service_1.png"
+        "image": "/images/landing_page_01/our_service/our_service_1.png"
       }
     ]
   },
   "whatToExpect": {
     "title": "What To Expect",
     "description": "A quick and comfortable experience with minimal interruption to your routine.",
-    "image": "/images/landing_page/our_service/our_service_2.png",
+    "image": "/images/landing_page_01/our_service/our_service_2.png",
     "points": [
       {
         "title": "Quick Procedure",

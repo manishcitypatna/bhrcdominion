@@ -4,8 +4,8 @@ export const treatmentsData = [
     subtitle:
       "Botox, Dysport, Juvederm, Radiesse, Restylane, and Sculptra",
     description:
-      "We offer a wide range of injectable treatments designed to reduce wrinkles, restore volume, and enhance facial contours. Our expert providers ensure natural-looking results tailored to your goals.",
-    image: "/images/landing_page/our_service/our_service_1.png",
+      "We offer numerous treatments to enhance beauty and assist with wrinkle reduction. Injectable procedures such as Botox, Juvederm, Radiesse and more, allow you to age beautifully and keep you feeling fabulous.",
+    image: "/images/landing_page_01/our_service/our_service_1.png",
     price: "Starting from $8 per unit",
     reverse: false,
     link: "/treatment/injectables",
@@ -16,8 +16,8 @@ export const treatmentsData = [
     subtitle:
       "CO2 Laser, PDO Threads, PRP Facial, and ZO Skin Health",
     description:
-      "Advanced skin rejuvenation treatments to improve texture, tone, and elasticity. These treatments stimulate collagen production and restore youthful skin.",
-    image: "/images/landing_page/our_service/our_service_3.png",
+      "There are many factors that can affect the look of your skin, including age, lifestyle, weight gain or loss, sun damage, and environmental toxins. We offer a wide range of skin rejuvenation services aimed at repairing and improving the health of your skin cells, giving you a younger and healthier look.",
+    image: "/images/landing_page_01/our_service/our_service_3.png",
     price: "Customized pricing available",
     reverse: true,
     link: "/treatment/skin-rejuvenation",
@@ -28,8 +28,8 @@ export const treatmentsData = [
     subtitle:
       "Morpheus8, CO2 CoolPeel, and Laser Hair Removal",
     description:
-      "Experience cutting-edge laser treatments designed for skin resurfacing, tightening, and hair removal with precision and minimal downtime.",
-    image: "/images/landing_page/our_service/our_service_4.png",
+      "Reverse the effects of aging on your face without surgery. We utilize non-surgical procedures with ultrasound and laser technology which can reduce wrinkles, repair skin, and remove unwanted hair for a more youthful appearance.",
+    image: "/images/landing_page_01/our_service/our_service_4.png",
     price: "Starting from $50/session",
     reverse: false,
     link: "/treatment/laser-treatments",
@@ -40,8 +40,8 @@ export const treatmentsData = [
     subtitle:
       "Hydrafacial, Microneedling, and VI Peel",
     description:
-      "Our facial treatments are tailored to cleanse, exfoliate, and hydrate your skin, leaving it refreshed, glowing, and rejuvenated.",
-    image: "/images/landing_page/our_service/our_service_2.png",
+      "Our facial services include a wide range of solutions that exfoliate, peel, and extract dead cells and toxins from your skin. We then work to revitalize and rejuvenate the newly surfaced skin cells giving you a younger, healthier look and feel.",
+    image: "/images/landing_page_01/our_service/our_service_2.png",
     price: "Starting from $120",
     reverse: true,
     link: "/treatment/facial-services",
@@ -52,8 +52,8 @@ export const treatmentsData = [
     subtitle:
       "Sculptra Butt Lift, EmSculpt, and Kybella",
     description:
-      "Shape and sculpt your body with non-invasive treatments designed to target fat, build muscle, and enhance your natural contours.",
-    image: "/images/landing_page/our_service/our_service_1.png",
+      "Get the curves you want without going under the knife. Body contouring technology, including CoolSculpting fat freezing, can remove stubborn fat, smooth out cellulite, and help you achieve a whole new look.",
+    image: "/images/landing_page_01/our_service/our_service_1.png",
     price: "Customized plans available",
     reverse: false,
     link: "/treatment/body-services",
@@ -64,8 +64,8 @@ export const treatmentsData = [
     subtitle:
       "Morpheus8, Hair Restoration, and PRP Treatments",
     description:
-      "Harness your body's natural healing power with regenerative treatments that promote tissue repair, collagen production, and long-term rejuvenation.",
-    image: "/images/landing_page/our_service/our_service_2.png",
+      "Advanced regenerative healing is here. Experience one of our many regenerative therapies for fast recovery of injury, skin rejuvenation, and superior anti-aging benefits.",
+    image: "/images/landing_page_01/our_service/our_service_2.png",
     price: "Consultation required",
     reverse: true,
     link: "/treatment/regenerative-therapies",
@@ -76,8 +76,8 @@ export const treatmentsData = [
     subtitle:
       "Medical Weight Loss featuring Semaglutide and Tirzepatide",
     description:
-      "Comprehensive wellness programs designed to improve overall health, boost energy levels, and support sustainable weight management.",
-    image: "/images/landing_page/our_service/our_service_3.png",
+      "Hormone imbalance can create serious health conditions. Our HRT (hormone replacement therapy) clinic specializes in restoring natural hormone balance that can help you feel healthier, have more energy and experience a better quality of life.",
+    image: "/images/landing_page_01/our_service/our_service_3.png",
     price: "Programs starting from $199",
     reverse: false,
     link: "/treatment/wellness-therapies",

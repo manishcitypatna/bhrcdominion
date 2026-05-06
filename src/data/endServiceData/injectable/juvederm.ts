@@ -1,11 +1,11 @@
-const juvederm = {
+export const juvederm = {
   slug: "juvederm",
 
   hero: {
     title: "Juvederm",
-    description: "Restore volume and enhance facial contours with advanced hyaluronic acid fillers.",
-    bgImage: "/images/landing_page/our_service/our_service_1.png",
-    modelImage: "/images/landing_page/our_service/our_service_2.png",
+    description: "Jeuveau temporarily improves the look of moderate to severe frown lines between the eyebrows in adults.",
+    bgImage: "/images/landing_page_01/our_service/our_service_1.png",
+    modelImage: "/images/landing_page_01/our_service/our_service_2.png",
     cta: "Request Consultation",
     breadcrumb: ["Home", "Treatment", "Injectables", "Juvederm"]
   },
@@ -20,7 +20,7 @@ const juvederm = {
   details: {
     title: "How Does Juvederm Work?",
     description: "Juvederm uses hyaluronic acid to restore lost volume, smooth wrinkles, and enhance facial features.",
-    image: "/images/landing_page/our_service/our_service_3.png",
+    image: "/images/landing_page_01/our_service/our_service_3.png",
     cta: {
       label: "Read More",
       link: "/blog/juvederm"
@@ -34,17 +34,17 @@ const juvederm = {
       {
         title: "Volume Loss",
         description: "Restore youthful fullness.",
-        image: "/images/landing_page/our_service/our_service_4.png"
+        image: "/images/landing_page_01/our_service/our_service_4.png"
       },
       {
         title: "Lip Enhancement",
         description: "Enhance shape and volume.",
-        image: "/images/landing_page/our_service/our_service_1.png"
+        image: "/images/landing_page_01/our_service/our_service_1.png"
       },
       {
         title: "Facial Contouring",
         description: "Define jawline and cheeks.",
-        image: "/images/landing_page/our_service/our_service_2.png"
+        image: "/images/landing_page_01/our_service/our_service_2.png"
       }
     ]
   },
@@ -56,17 +56,17 @@ const juvederm = {
       {
         title: "Consultation",
         description: "Customized plan based on facial structure.",
-        image: "/images/landing_page/our_service/our_service_3.png"
+        image: "/images/landing_page_01/our_service/our_service_3.png"
       },
       {
         title: "Injection",
         description: "Filler is injected into targeted areas.",
-        image: "/images/landing_page/our_service/our_service_4.png"
+        image: "/images/landing_page_01/our_service/our_service_4.png"
       },
       {
         title: "Instant Results",
         description: "Immediate volume and smoothing.",
-        image: "/images/landing_page/our_service/our_service_1.png"
+        image: "/images/landing_page_01/our_service/our_service_1.png"
       }
     ]
   },
@@ -74,7 +74,7 @@ const juvederm = {
   whatToExpect: {
     title: "What To Expect",
     description: "Instant results with minimal recovery.",
-    image: "/images/landing_page/our_service/our_service_2.png",
+    image: "/images/landing_page_01/our_service/our_service_2.png",
     points: [
       { title: "Immediate Results", description: "Visible instantly." },
       { title: "Minimal Downtime", description: "Mild swelling may occur." },
@@ -92,5 +92,3 @@ const juvederm = {
     ]
   }
 };
-
-export default juvederm;

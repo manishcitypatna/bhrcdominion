@@ -2,35 +2,30 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { LANDING_PAGE_IMAGES } from "../../../public/images/landingPageImages";
 
 const highlights = [
   {
     title: "Become More Energetic And Full of Life",
-    image: "/images/landing_page/about/01.png",
+    image: LANDING_PAGE_IMAGES.FEATURE_HIGHLIGHTS.ABOUT_1,
   },
   {
     title: "Personalized facial care designed just for you",
-    image: "/images/landing_page/about/02.png",
+    image: LANDING_PAGE_IMAGES.FEATURE_HIGHLIGHTS.ABOUT_2,
   },
   {
     title: "Results-driven age management",
-    image: "/images/landing_page/about/03.png",
+    image: LANDING_PAGE_IMAGES.FEATURE_HIGHLIGHTS.ABOUT_3,
   },
 ];
 
 export default function FeatureHighlights() {
   return (
-    <section className="relative w-full max-w-[1920px] mx-auto py-[120px] bg-bg-light overflow-hidden">
+    <section className="relative w-full max-w-[1920px] mx-auto py-[60px] md:py-[120px] bg-bg-light overflow-hidden">
       
-      {/* Background Logo */}
-      <div className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 w-full flex justify-center opacity-[0.05] pointer-events-none z-0">
-        <span className="text-[18vw] md:text-[14vw] font-bold text-primary uppercase tracking-tight whitespace-normal">
-          BEVERLY HILLS
-        </span>
-      </div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center text-center px-[clamp(20px,8vw,240px)]">
+      <div className="relative z-10 flex flex-col items-center text-center container-custom">
         
         {/* Title + Description */}
         <motion.div
@@ -82,7 +77,26 @@ export default function FeatureHighlights() {
             </motion.div>
           ))}
         </div>
+
+        {/* Logo at the bottom */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+          className="mt-12 md:mt-32 w-full flex justify-center"
+        >
+          <div className="relative w-full h-[15vw] md:h-[12vw] min-h-[100px] max-h-[300px] opacity-50">
+            <Image
+              src={LANDING_PAGE_IMAGES.FEATURE_HIGHLIGHTS.LOGO_BLACK}
+              alt="Beverly Hills Logo"
+              fill
+              className="object-contain object-center"
+            />
+          </div>
+        </motion.div>
       </div>
+
 
       {/* Hide scrollbar */}
       <style jsx>{`

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Star, ArrowUpRight, Play } from "lucide-react";
 import Image from "next/image";
+import { LANDING_PAGE_IMAGES } from "../../../public/images/landingPageImages";
 
 /* ================= TYPES ================= */
 
@@ -45,7 +46,7 @@ const columns: Item[][] = [
       type: "image",
       author: "Brooke",
       tag: "Client since 2020",
-      image: "/images/landing_page/testimonials/testimonials_1.png",
+      image: LANDING_PAGE_IMAGES.TESTIMONIALS.TESTIMONIAL_1,
     },
   ],
 
@@ -62,7 +63,7 @@ const columns: Item[][] = [
       type: "image",
       author: "Brooke",
       tag: "Client since 2020",
-      image: "/images/landing_page/testimonials/testimonials_1.png",
+      image: LANDING_PAGE_IMAGES.TESTIMONIALS.TESTIMONIAL_1,
     },
     {
       type: "text",
@@ -79,7 +80,7 @@ const columns: Item[][] = [
       type: "image",
       author: "Scarlett Walt",
       tag: "Client since 2020",
-      image: "/images/landing_page/testimonials/testimonials_1.png",
+      image: LANDING_PAGE_IMAGES.TESTIMONIALS.TESTIMONIAL_1,
     },
     {
       type: "text",
@@ -117,7 +118,7 @@ const columns: Item[][] = [
       type: "image",
       author: "Brooke",
       tag: "Client since 2020",
-      image: "/images/landing_page/testimonials/testimonials_1.png",
+      image: LANDING_PAGE_IMAGES.TESTIMONIALS.TESTIMONIAL_1,
     },
   ],
 ];
@@ -127,7 +128,7 @@ const columns: Item[][] = [
 export default function Testimonials() {
   return (
     <section className="py-[100px] bg-[#EBF5FF]">
-      <div className="max-w-[1440px] mx-auto px-6">
+      <div className="container-custom">
 
         {/* Heading */}
         <h2 className="text-center text-primary text-[clamp(28px,4vw,48px)] font-heading mb-16">

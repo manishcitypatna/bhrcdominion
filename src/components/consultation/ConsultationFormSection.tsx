@@ -50,7 +50,7 @@ export default function ConsultationFormSection() {
     <section className="w-full bg-white py-[60px] md:py-[80px]">
 
       <div className="flex justify-center">
-        <div className="w-full max-w-[1440px] flex flex-col lg:flex-row items-stretch gap-[32px] lg:gap-[27px] px-[16px] md:px-[40px] lg:px-0">
+        <div className="container-custom flex flex-col lg:flex-row items-stretch gap-[32px] lg:gap-[27px]">
 
           {/* IMAGE */}
           <div className="w-full lg:w-[781px] h-[300px] md:h-[500px] lg:h-auto relative rounded-[8px] overflow-hidden flex-shrink-0">

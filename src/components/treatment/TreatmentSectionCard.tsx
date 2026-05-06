@@ -32,7 +32,7 @@ export default function TreatmentSectionCard({
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="w-full"
     >
-      <div className="max-w-full mx-auto px-6 md:px-20 xl:px-[240px]">
+      <div className="container-custom">
         <div
           className={`
             flex flex-col lg:flex-row 

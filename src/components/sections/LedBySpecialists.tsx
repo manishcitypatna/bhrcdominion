@@ -3,11 +3,12 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
+import { LANDING_PAGE_IMAGES } from "../../../public/images/landingPageImages";
 
 export default function LedBySpecialists() {
   return (
     <section className="w-full bg-[#EBF5FF] py-[70px] md:py-[90px] lg:py-[100px]">
-      <div className="max-w-[1440px] mx-auto px-5 md:px-8">
+      <div className="container-custom">
 
         {/* Title */}
         <h2 className="text-primary text-[clamp(28px,4vw,48px)] text-center mb-10 md:mb-12 font-heading">
@@ -31,7 +32,7 @@ export default function LedBySpecialists() {
               rounded-[8px] overflow-hidden"
           >
             <Image
-              src="/images/landing_page/ledBySpecialist/ledBySpecialist_1.png"
+              src={LANDING_PAGE_IMAGES.LED_BY_SPECIALISTS.SPECIALIST}
               alt="Our Specialists"
               fill
               className="object-cover"

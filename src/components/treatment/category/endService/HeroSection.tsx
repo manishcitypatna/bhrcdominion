@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function HeroSection({ data }: any) {
   return (
-    <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[60vh] md:min-h-[75vh] flex items-center overflow-hidden">
 
       {/* BACKGROUND IMAGE */}
       <div className="absolute inset-0 z-0">
@@ -21,7 +21,7 @@ export default function HeroSection({ data }: any) {
       </div>
 
       {/* CONTENT */}
-      <div className="relative z-10 container-custom flex flex-col justify-center py-20">
+      <div className="relative z-10 container-custom flex flex-col justify-center py-20 md:py-32">
 
         {/* BREADCRUMB */}
         <div className="text-white/70 text-sm mb-6">
@@ -53,7 +53,7 @@ export default function HeroSection({ data }: any) {
       </div>
 
       {/* MODEL IMAGE */}
-      <div className="absolute right-0 bottom-0 h-[80%] w-[40%] hidden md:block">
+      <div className="absolute right-0 bottom-0 h-[60%] md:h-[80%] w-[50%] md:w-[40%] block">
         <Image
           src={data.modelImage}
           alt="model"

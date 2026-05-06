@@ -3,11 +3,12 @@
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { LANDING_PAGE_IMAGES } from "../../../public/images/landingPageImages";
 
 const CTA_IMAGES = {
-  bg: "/images/landing_page/seeTheDifference/seeTheDifference_bg.png",
-  model: "/images/landing_page/seeTheDifference/seeTheDifference_model.png",
-  logo: "/images/landing_page/logo/logo_blue.png",
+  bg: LANDING_PAGE_IMAGES.CTA.BACKGROUND,
+  model: LANDING_PAGE_IMAGES.CTA.MODEL,
+  logo: LANDING_PAGE_IMAGES.LOGOS.BLUE,
 };
 
 export default function CTA() {
@@ -54,7 +55,7 @@ export default function CTA() {
       </motion.div>
 
       {/* CONTENT */}
-      <div className="relative z-10 max-w-[1440px] mx-auto px-5 md:px-8 flex items-center h-full">
+      <div className="relative z-10 container-custom flex items-center h-full">
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

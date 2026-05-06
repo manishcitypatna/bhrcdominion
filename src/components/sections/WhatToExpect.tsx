@@ -3,32 +3,33 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { LANDING_PAGE_IMAGES } from "../../../public/images/landingPageImages";
 
 const items = [
   {
     id: 1,
     title: "Arrival Lounge",
-    image: "/images/landing_page/whatToExpectInside/whatToExpectInside_1.png",
+    image: LANDING_PAGE_IMAGES.WHAT_TO_EXPECT.STEP_1,
   },
   {
     id: 2,
     title: "Consultation Suites",
-    image: "/images/landing_page/whatToExpectInside/whatToExpectInside_2.png",
+    image: LANDING_PAGE_IMAGES.WHAT_TO_EXPECT.STEP_2,
   },
   {
     id: 3,
     title: "Treatment Studios",
-    image: "/images/landing_page/whatToExpectInside/whatToExpectInside_3.png",
+    image: LANDING_PAGE_IMAGES.WHAT_TO_EXPECT.STEP_3,
   },
   {
     id: 4,
     title: "Skin Preparation Lounge",
-    image: "/images/landing_page/whatToExpectInside/whatToExpectInside_4.png",
+    image: LANDING_PAGE_IMAGES.WHAT_TO_EXPECT.STEP_4,
   },
   {
     id: 5,
     title: "Recovery / Aftercare Lounge",
-    image: "/images/landing_page/whatToExpectInside/whatToExpectInside_5.png",
+    image: LANDING_PAGE_IMAGES.WHAT_TO_EXPECT.STEP_5,
   },
 ];
 
@@ -38,7 +39,7 @@ export default function WhatToExpect() {
   return (
     <section className="w-full bg-bg-light py-[100px]">
       {/* Wider container for proper alignment */}
-      <div className="max-w-[1440px] mx-auto px-6">
+      <div className="container-custom">
 
         {/* Layout */}
         <div className="grid grid-cols-1 md:grid-cols-[1fr_520px] items-center gap-10 md:gap-[120px]">

@@ -26,9 +26,20 @@ const dmSerif = DM_Serif_Display({
 });
 
 const bilagike = localFont({
-  src: "../fonts/Bilagike.woff2",
+  src: [
+    {
+      path: "../fonts/Bilagike.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Bilagike.otf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
   variable: "--font-bilagike",
-  display: "block", // 🔥 IMPORTANT
+  display: "swap",
 });
 
 export const metadata: Metadata = {

@@ -3,25 +3,26 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { LANDING_PAGE_IMAGES } from "../../../public/images/landingPageImages";
 
 const resultItems = [
   {
     title: "Derma fillers",
     subtitle: "Slide to compare results",
-    before: "/images/landing_page/real_result/before_1.png",
-    after: "/images/landing_page/real_result/after_1.png",
+    before: LANDING_PAGE_IMAGES.REAL_RESULTS.BEFORE_1,
+    after: LANDING_PAGE_IMAGES.REAL_RESULTS.AFTER_1,
   },
   {
     title: "Spot Treatment",
     subtitle: "Slide to compare results",
-    before: "/images/landing_page/real_result/before_2.png",
-    after: "/images/landing_page/real_result/after_2.png",
+    before: LANDING_PAGE_IMAGES.REAL_RESULTS.BEFORE_2,
+    after: LANDING_PAGE_IMAGES.REAL_RESULTS.AFTER_2,
   },
   {
     title: "Lash Lift",
     subtitle: "Slide to compare results",
-    before: "/images/landing_page/real_result/before_3.png",
-    after: "/images/landing_page/real_result/after_3.png",
+    before: LANDING_PAGE_IMAGES.REAL_RESULTS.BEFORE_3,
+    after: LANDING_PAGE_IMAGES.REAL_RESULTS.AFTER_3,
   },
 ];
 
@@ -113,7 +114,7 @@ const BeforeAfterSlider = ({
 export default function RealResults() {
   return (
     <section className="py-[100px] bg-white">
-      <div className="max-w-[1200px] mx-auto px-6 text-center">
+      <div className="container-custom text-center">
         
         {/* Header */}
         <div className="mb-16">

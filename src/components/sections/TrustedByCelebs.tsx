@@ -3,11 +3,12 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
+import { LANDING_PAGE_IMAGES } from "../../../public/images/landingPageImages";
 
 export default function TrustedByCelebs() {
   return (
     <section className="w-full bg-bg-light py-12 md:py-16 lg:py-20 overflow-hidden">
-      <div className="max-w-[1200px] mx-auto px-5 md:px-8">
+      <div className="container-custom">
         
         {/* Header */}
         <div className="flex flex-col items-center text-center gap-6 md:gap-8 mb-10 md:mb-14">
@@ -57,7 +58,7 @@ export default function TrustedByCelebs() {
           >
             <div className="relative w-full max-w-[400px] md:max-w-[460px] aspect-[1.4] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] overflow-hidden">
               <Image
-                src="/images/landing_page/trusted_by_celeb/trustedByCeleb_1.png"
+                src={LANDING_PAGE_IMAGES.TRUSTED_BY_CELEBS.CELEB_1}
                 alt="Celebrity Ribbon Cutting"
                 fill
                 className="object-cover"
@@ -75,7 +76,7 @@ export default function TrustedByCelebs() {
           >
             <div className="relative w-full max-w-[280px] md:max-w-[340px] aspect-[1.4] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.12)] overflow-hidden">
               <Image
-                src="/images/landing_page/trusted_by_celeb/trustedByCeleb_2.png"
+                src={LANDING_PAGE_IMAGES.TRUSTED_BY_CELEBS.CELEB_2}
                 alt="Celebrity Testimonial"
                 fill
                 className="object-cover"

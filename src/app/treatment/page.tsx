@@ -13,7 +13,7 @@ export default function TreatmentPage() {
       <section className="relative w-full h-[600px] md:h-[700px] overflow-hidden">
 
         <Image
-          src="/images/landing_page/our_service/our_service_1.png"
+          src="/images/landing_page_01/our_service/our_service_1.png"
           alt="Treatment Hero"
           fill
           priority

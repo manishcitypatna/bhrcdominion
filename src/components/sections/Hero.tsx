@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { LANDING_PAGE_IMAGES } from "../../../public/images/landingPageImages";
 
 export default function Hero() {
   return (
@@ -28,7 +29,7 @@ pb-2 md:pb-12
           }}
         />
         <Image
-          src="/images/landing_page/hero_banner/hero_banner.png"
+          src={LANDING_PAGE_IMAGES.HERO.BANNER}
           alt="Hero"
           fill
           className="object-cover"
