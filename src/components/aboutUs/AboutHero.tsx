@@ -6,14 +6,14 @@ import { ABOUT_PAGE_IMAGES } from "../../../public/images/aboutPageImages";
 
 export default function AboutHero() {
   return (
-    <section className="relative w-full h-[600px] md:h-[700px] bg-white overflow-hidden">
+    <section className="relative w-full aspect-[16/9] md:aspect-auto md:h-[700px] bg-white overflow-hidden">
       
       <Image
         src={ABOUT_PAGE_IMAGES.HERO.BANNER}
         alt="About Hero"
         fill
         priority
-        className="object-cover object-center"
+        className="object-contain md:object-cover object-center"
       />
 
       <div className="absolute inset-0 bg-black/10 z-[5]" />

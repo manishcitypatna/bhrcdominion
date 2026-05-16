@@ -1,6 +1,6 @@
 export const ABOUT_PAGE_IMAGES = {
   HERO: {
-    BANNER: "https://res.cloudinary.com/dcvco8nlz/image/upload/v1777917581/0001_txlhzg.png",
+    BANNER: "https://res.cloudinary.com/dcvco8nlz/image/upload/c_crop,g_north_west,h_1142,w_2560/BHRC_CitizenofEarth089-1-scaled_hilnit.jpg",
   },
   INTRO: {
     MAIN: "https://res.cloudinary.com/dcvco8nlz/image/upload/v1777916817/02_dnefmd.jpg",

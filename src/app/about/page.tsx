@@ -12,7 +12,7 @@ import Footer from "@/components/layout/Footer";
 
 export default function AboutPage() {
   return (
-    <main className="overflow-x-hidden pt-[140px]">
+    <main className="relative overflow-x-hidden">
       <AboutHero />
       <AboutIntro />
       <WhyChooseUs />
