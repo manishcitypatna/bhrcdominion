@@ -19,10 +19,10 @@ export default function BlogsPage() {
         );
 
   return (
-    <div className="bg-bg-light min-h-screen">
+    <main className="relative bg-bg-light min-h-screen overflow-x-hidden">
 
       {/* HEADER */}
-      <section className="w-full pt-[103px] md:pt-[119px] lg:pt-[139px] pb-[60px] bg-white">
+      <section className="w-full py-[60px] bg-white">
         <div className="max-w-[1440px] mx-auto px-[clamp(20px,8vw,240px)]">
           <h1 className="text-primary font-heading text-[clamp(48px,6vw,96px)]">
             Blogs
@@ -53,6 +53,6 @@ export default function BlogsPage() {
         </div>
       </section>
 
-    </div>
+    </main>
   );
 }

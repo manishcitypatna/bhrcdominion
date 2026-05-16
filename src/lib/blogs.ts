@@ -6,7 +6,7 @@ import html from "remark-html";
 
 const blogsDirectory = path.join(process.cwd(), "content/blogs");
 
-// ✅ get single blog by slug
+// get single blog by slug
 export async function getBlogBySlug(slug: string) {
   const fullPath = path.join(blogsDirectory, `${slug}.md`);
 

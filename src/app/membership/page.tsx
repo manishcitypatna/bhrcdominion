@@ -5,7 +5,7 @@ import MembershipFAQ from "@/components/membership/MembershipFAQ";
 
 export default function MembershipPage() {
     return (
-        <main className="bg-[#EBF5FF]">
+        <main className="relative bg-[#EBF5FF] overflow-x-hidden">
             <MembershipHero />
             <MembershipPlans />
             <MembershipFAQ />

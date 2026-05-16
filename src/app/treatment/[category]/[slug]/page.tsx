@@ -14,6 +14,8 @@ import WhoIsThisFor from "@/components/treatment/category/endService/WhoIsThisFo
 import HowItWorks from "@/components/treatment/category/endService/HowItWorks";
 import WhatToExpect from "@/components/treatment/category/endService/WhatToExpect";
 import FAQSection from "@/components/treatment/category/endService/FAQSection";
+import HighlightSection from "@/components/treatment/category/endService/highlightSection";
+import BeforeAfterSection from "@/components/treatment/category/endService/BeforeAfterSection";
 
 const allServices: Record<string, Record<string, any>> = {
   "injectables": injectableData,
@@ -40,15 +42,17 @@ export default function ServicePage({ params }: any) {
   }
 
   return (
-    <main>
+    <main className="relative overflow-x-hidden">
 
       <HeroSection data={data.hero} />
       <DurationBar data={data.durationBar} />
       <DetailsSection data={data.details} />
-      <WhoIsThisFor data={data.whoIsThisFor} />
+      <WhoIsThisFor data={data.whoIsThisFor} /> 
       <HowItWorks data={data.howItWorks} />
       <WhatToExpect data={data.whatToExpect} />
+      {data.beforeAfter && <BeforeAfterSection data={data.beforeAfter} />}
       <FAQSection data={data.faq} />
+      <HighlightSection data={data.highlightSection} />
 
     </main>
   );

@@ -2,13 +2,14 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { ABOUT_PAGE_IMAGES } from "../../../public/images/aboutPageImages";
 
 export default function AboutHero() {
   return (
     <section className="relative w-full h-[600px] md:h-[700px] bg-white overflow-hidden">
       
       <Image
-        src="/images/aboutUs/0001.png"
+        src={ABOUT_PAGE_IMAGES.HERO.BANNER}
         alt="About Hero"
         fill
         priority

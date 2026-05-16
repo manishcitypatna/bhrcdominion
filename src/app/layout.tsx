@@ -63,12 +63,13 @@ export default function RootLayout({
           ${figtree.variable} 
           ${dmSerif.variable} 
           ${bilagike.variable} 
-          antialiased 
-          overflow-x-hidden
+          antialiased
         `}
       >
-        <TopStrip />
-        <Navbar />
+        <header className="sticky top-0 z-[999] w-full bg-white">
+          <TopStrip />
+          <Navbar />
+        </header>
         {children}
         <Footer />
       </body>

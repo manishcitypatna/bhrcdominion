@@ -4,12 +4,12 @@ import { megaMenuData } from "@/data/menuData";
 import Link from "next/link";
 import Image from "next/image";
 
-// ✅ CATEGORY SLUG (handles uppercase safely)
+// CATEGORY SLUG (handles uppercase safely)
 const getCategorySlug = (heading: string) => {
   return heading.toLowerCase().trim().replace(/\s+/g, "-");
 };
 
-// ✅ ITEM SLUG (clean + safe)
+// ITEM SLUG (clean + safe)
 const generateSlug = (text: string) => {
   return text
     .toLowerCase()
@@ -41,7 +41,7 @@ export default function MegaMenu({ type }: { type: string }) {
           <div className="hidden md:flex flex-col gap-[16px] w-[240px] shrink-0">
             <div className="relative w-full h-[140px] rounded-[8px] overflow-hidden">
               <Image
-                src="/images/Navbar/section2_2.jpg"
+                src="https://res.cloudinary.com/dcvco8nlz/image/upload/v1778932869/10c68fbb1e1858bf2a4b5dbd0d2d9f32fd7d0cab_2_1_l3s06m.jpg"
                 alt="CO2 Laser"
                 fill
                 className="object-cover"
@@ -70,7 +70,7 @@ export default function MegaMenu({ type }: { type: string }) {
             {data.columns.map((col, index) => {
               const categorySlug = getCategorySlug(col.heading);
 
-              // ✅ SAFETY CHECK (prevents undefined routes)
+              // SAFETY CHECK (prevents undefined routes)
               if (!categorySlug) return null;
 
               return (

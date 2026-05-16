@@ -111,8 +111,8 @@ export const blogsData: Blog[] = [
   },
 ];
 
-// ✅ FEATURED BLOG
+// FEATURED BLOG
 export const featuredBlog = blogsData[0];
 
-// ✅ PAGINATION
+// PAGINATION
 export const BLOGS_PER_PAGE = 6;

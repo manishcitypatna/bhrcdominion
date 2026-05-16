@@ -7,7 +7,7 @@ import { Phone, Mail } from "lucide-react";
 
 export default function ContactPage() {
   return (
-    <div className="bg-bg-light min-h-screen pt-[103px] md:pt-[119px] lg:pt-[139px]">
+    <main className="relative bg-bg-light min-h-screen overflow-x-hidden">
 
       {/* 🔹 HEADER */}
       <section className="w-full bg-white py-[80px]">
@@ -40,7 +40,7 @@ export default function ContactPage() {
 
               <div className="flex items-center gap-2">
                 <Phone size={18} />
-                <span>(480) 555-0103</span>
+                <span>(210) 888 8889</span>
               </div>
 
               <div className="flex items-center gap-2">
@@ -88,6 +88,6 @@ export default function ContactPage() {
 
       {/* REUSED CONSULTATION FORM */}
       <ConsultationFormSection />
-    </div>
+    </main>
   );
 }

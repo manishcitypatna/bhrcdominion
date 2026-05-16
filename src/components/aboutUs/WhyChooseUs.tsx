@@ -2,20 +2,21 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { ABOUT_PAGE_IMAGES } from "../../../public/images/aboutPageImages";
 
 const items = [
   {
-    icon: "/images/aboutUs/whyChooseUs_01.png",
+    icon: ABOUT_PAGE_IMAGES.WHY_CHOOSE_US.ICON_1,
     title: "World’s Best Treatment",
     desc: "We provide all the latest and most advanced procedures and programs.",
   },
   {
-    icon: "/images/aboutUs/whyChooseUs_02.png",
+    icon: ABOUT_PAGE_IMAGES.WHY_CHOOSE_US.ICON_2,
     title: "Privacy and Discretion",
     desc: "All treatments take place in a comfortable, supportive, and discreet environment.",
   },
   {
-    icon: "/images/aboutUs/whyChooseUs_03.png",
+    icon: ABOUT_PAGE_IMAGES.WHY_CHOOSE_US.ICON_3,
     title: "Highest Quality Treatment",
     desc: "We use licensed, qualified medical providers to perform procedures.",
   },

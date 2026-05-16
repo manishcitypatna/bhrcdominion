@@ -1,17 +1,19 @@
+// http://localhost:3000/treatment/injectables
+// http://localhost:3000/treatment/skin-rejuvenation and other
 export const categories = [
   {
     slug: "injectables",
     title: "Injectables",
     description:
-      "Enhance your natural beauty with our advanced injectable treatments designed to smooth wrinkles, restore volume, and refine facial contours with precision.",
-    heroImage: "/images/landing_page_01/our_service/our_service_1.png",
+      "Stop premature aging with our advanced range of cosmetic injectables designed for multiple treatment goals, from facial rejuvenation to reducing underarm sweat. Our injectable solutions include Botox, Juvederm, Radiesse, Dysport, Belotero, and more, helping you achieve smoother, more youthful-looking skin with confidence.",
+    heroImage: "/images/landing_page_01/our_service/our_service_a1.png",
   },
 
   {
     slug: "skin-rejuvenation",
     title: "Skin Rejuvenation",
     description:
-      "Revitalize your skin with cutting-edge treatments that improve texture, tone, and overall radiance while stimulating natural collagen production.",
+      "If you're looking for a way to feel more confident in yourself or want help with those pesky age spots on your face, this might be what you need! We offer several procedures as part of our non surgical skin rejuvenation options, from lasers and chemical peels to fillers and Botox injections. So whatever you are looking for, we have something for everyone!",
     heroImage: "/images/landing_page_01/our_service/our_service_2.png",
   },
 
@@ -19,7 +21,7 @@ export const categories = [
     slug: "laser-treatments",
     title: "Laser Treatments",
     description:
-      "Experience advanced laser technologies for skin resurfacing, hair removal, and targeted treatments that deliver visible, long-lasting results.",
+      "With our state-of-the-art laser treatment technology, we can remove scarring and rid your aging skin of all those pesky age spots. We also offer IPL treatments for a more customized procedure that targets specific areas of you, making it a great option for those searching for laser hair removal near me.",
     heroImage: "/images/landing_page_01/our_service/our_service_3.png",
   },
 
@@ -27,7 +29,7 @@ export const categories = [
     slug: "facial-services",
     title: "Facial Services",
     description:
-      "Customized facial treatments tailored to cleanse, hydrate, and rejuvenate your skin for a refreshed and glowing appearance.",
+      "With a gentle touch, we can improve your skincare routine and give you that youthful look. Our facials are painless ways to enhance the health of your facial muscles without surgical methods like injections or laser treatments, making them a great choice if you are searching for facial services near me!",
     heroImage: "/images/landing_page_01/our_service/our_service_4.png",
   },
 
@@ -35,7 +37,7 @@ export const categories = [
     slug: "body-services",
     title: "Body Services",
     description:
-      "Sculpt, tone, and enhance your body with non-invasive treatments designed to deliver natural-looking results with minimal downtime.",
+      "If you're looking for a way to feel more confident in yourself or want help with shaping and toning your body, this might be what you need! We offer several procedures as part of our non invasive body contouring options, from advanced technologies to targeted treatments designed to enhance your natural shape. So whatever you are looking for, we have something for everyone!",
     heroImage: "/images/landing_page_01/our_service/our_service_1.png",
   },
 
@@ -43,7 +45,7 @@ export const categories = [
     slug: "regenerative-therapies",
     title: "Regenerative Therapies",
     description:
-      "Harness your body’s natural healing power with advanced regenerative treatments that promote repair, rejuvenation, and long-term wellness.",
+      "If you're looking for a way to feel more confident in yourself or want help with those pesky age spots on your face, this might be what you need! We offer several procedures as part of our regenerative therapies, from advanced treatments to natural solutions designed to restore and rejuvenate your skin and body. So whatever you are looking for, we have something for everyone!",
     heroImage: "/images/landing_page_01/our_service/our_service_2.png",
   },
 
@@ -51,7 +53,7 @@ export const categories = [
     slug: "wellness-therapies",
     title: "Wellness Therapies",
     description:
-      "Optimize your health and energy with personalized wellness programs designed to support long-term vitality and overall well-being.",
+      "If you're looking for a way to feel more confident in yourself or want help improving your overall well-being, this might be what you need! We offer several solutions as part of our hormone therapy for wellness, designed to restore balance, boost energy, and support long-term health. So whatever you are looking for, we have something for everyone!",
     heroImage: "/images/landing_page_01/our_service/our_service_3.png",
   },
 

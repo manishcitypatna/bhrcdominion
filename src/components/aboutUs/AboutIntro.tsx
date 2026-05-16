@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { ABOUT_PAGE_IMAGES } from "../../../public/images/aboutPageImages";
 
 export default function AboutIntro() {
   return (
@@ -16,7 +17,7 @@ export default function AboutIntro() {
           className="w-full lg:w-1/2 h-[400px] relative rounded-lg overflow-hidden"
         >
           <Image
-            src="/images/aboutUs/02.jpg"
+            src={ABOUT_PAGE_IMAGES.INTRO.MAIN}
             alt="About"
             fill
             className="object-cover"

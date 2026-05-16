@@ -3,10 +3,10 @@ import ConsultationFormSection from "@/components/consultation/ConsultationFormS
 
 export default function ConsultationPage() {
   return (
-    <div className="bg-white min-h-screen">
+    <main className="relative bg-white min-h-screen overflow-x-hidden">
 
       {/* 🔥 PAGE HEADER (INLINE, SAME AS TREATMENTS STYLE) */}
-      <section className="w-full pt-[103px] md:pt-[119px] lg:pt-[139px] pb-[64px] md:pb-[80px]">
+      <section className="w-full py-[64px] md:py-[80px]">
 
         <div className="max-w-[1440px] mx-auto px-[clamp(20px,8vw,240px)]">
 
@@ -30,6 +30,6 @@ export default function ConsultationPage() {
 
       <ConsultationFormSection />
 
-    </div>
+    </main>
   );
 }

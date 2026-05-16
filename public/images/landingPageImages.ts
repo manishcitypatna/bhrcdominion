@@ -7,17 +7,20 @@ export const LANDING_PAGE_IMAGES = {
     ICON: "https://res.cloudinary.com/dcvco8nlz/image/upload/v1777928252/logo_icon_ehqfhl.png",
   },
   HERO: {
-    BANNER: "https://res.cloudinary.com/dcvco8nlz/image/upload/v1777928102/hero_banner_1_icuilp.png",
+    BANNER: "https://res.cloudinary.com/dcvco8nlz/image/upload/v1777928099/hero_banner_sqyvj4.png",
   },
   BLUE_BAND: {
     SECTION_1: "https://res.cloudinary.com/dcvco8nlz/image/upload/v1777928057/section2_1_cnscfu.jpg",
     SECTION_2: "https://res.cloudinary.com/dcvco8nlz/image/upload/v1777928055/section2_2_sxvlsb.jpg",
   },
   TREATMENT: {
-    SERVICE_1: "https://res.cloudinary.com/dcvco8nlz/image/upload/v1777928387/our_service_1_jdgj65.png",
-    SERVICE_2: "https://res.cloudinary.com/dcvco8nlz/image/upload/v1777928388/our_service_2_wvcss8.png",
-    SERVICE_3: "https://res.cloudinary.com/dcvco8nlz/image/upload/v1777928390/our_service_3_dzjiz1.png",
-    SERVICE_4: "https://res.cloudinary.com/dcvco8nlz/image/upload/v1777928392/our_service_4_nrgadw.png",
+    SERVICE_1: "https://res.cloudinary.com/dcvco8nlz/image/upload/v1778326057/Injectables_dvdqqr.png",
+    SERVICE_2: "https://res.cloudinary.com/dcvco8nlz/image/upload/v1778322355/Facial_Services_hsbdqo.png",
+    SERVICE_3: "https://res.cloudinary.com/dcvco8nlz/image/upload/v1778322384/Skin_Rejuvenation_nd5q3u.png",
+    SERVICE_4: "https://res.cloudinary.com/dcvco8nlz/image/upload/v1778322287/Laser_Treatments_u8g9z7.png",
+    SERVICE_5: "https://res.cloudinary.com/dcvco8nlz/image/upload/v1778322521/Body_Contouring_ffahgt.png",
+    SERVICE_6: "https://res.cloudinary.com/dcvco8nlz/image/upload/v1778322427/Regenerative_Therapies_eygmfs.png",
+    SERVICE_7: "https://res.cloudinary.com/dcvco8nlz/image/upload/v1778322587/Wellness_Therapies_lqhrvw.png",
   },
   FEATURE_HIGHLIGHTS: {
     ABOUT_1: "https://res.cloudinary.com/dcvco8nlz/image/upload/v1777927950/01_tqoula.png",

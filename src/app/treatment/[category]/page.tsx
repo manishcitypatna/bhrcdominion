@@ -20,7 +20,7 @@ export default function CategoryPage() {
   }
 
   return (
-    <div className="bg-bg-light min-h-screen pt-[103px] md:pt-[119px] lg:pt-[139px]">
+    <main className="relative bg-bg-light min-h-screen overflow-x-hidden">
 
       <CategoryHero
         title={category.title}
@@ -34,6 +34,6 @@ export default function CategoryPage() {
 
       <CTA />
 
-    </div>
+    </main>
   );
 }

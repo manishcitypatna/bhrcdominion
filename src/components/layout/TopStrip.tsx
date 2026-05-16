@@ -4,7 +4,7 @@ import { Phone, MapPin } from "lucide-react";
 
 export default function TopStrip() {
   return (
-    <div className="fixed top-0 left-0 w-full h-[31px] bg-primary z-[1001]">
+    <div className="h-[31px] bg-primary">
       <div className="container-custom flex items-center justify-between h-full text-[12px] text-bg-light">
         <div className="flex items-center gap-2">
           <Phone size={14} className="text-secondary" />

@@ -22,7 +22,7 @@ export default function ConsultationFormSection() {
     }));
   };
 
-  // ✅ Treatment dropdown options (alphabetical)
+  // Treatment dropdown options (alphabetical)
   const treatmentOptions = [
     "Abdomen",
     "Arms",
@@ -55,7 +55,7 @@ export default function ConsultationFormSection() {
           {/* IMAGE */}
           <div className="w-full lg:w-[781px] h-[300px] md:h-[500px] lg:h-auto relative rounded-[8px] overflow-hidden flex-shrink-0">
             <Image
-              src="/images/Consultation_Form/Consultation_Form.png"
+              src="https://res.cloudinary.com/dcvco8nlz/image/upload/v1777923465/Consultation_Form_y9uccm.png"
               alt="Consultation"
               fill
               className="object-cover"

@@ -7,18 +7,18 @@ import { motion } from "framer-motion";
 
 export default function TreatmentPage() {
   return (
-    <div className="bg-bg-light min-h-screen pt-[103px] md:pt-[119px] lg:pt-[139px]">
+    <main className="relative bg-bg-light min-h-screen overflow-x-hidden">
 
       {/* ================= HERO SECTION ================= */}
       <section className="relative w-full h-[600px] md:h-[700px] overflow-hidden">
 
         <Image
-          src="/images/landing_page_01/our_service/our_service_1.png"
+          src="https://res.cloudinary.com/dcvco8nlz/image/upload/v1778163419/14deb129f3636ef89d24a69d079753a7ddc4bc88_uqnpiy.png"
           alt="Treatment Hero"
           fill
           priority
           className="object-cover"
-        />
+        /> 
 
         <div className="absolute inset-0 bg-white/10" />
 
@@ -65,6 +65,6 @@ export default function TreatmentPage() {
 
       </section>
 
-    </div>
+    </main>
   );
 }

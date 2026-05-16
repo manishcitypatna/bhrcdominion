@@ -29,17 +29,17 @@ const treatments = [
   {
     title: "Body Contouring",
     subtitle: "Sculptra Butt Lift, EmSculpt, and Kybella",
-    image: LANDING_PAGE_IMAGES.TREATMENT.SERVICE_1,
+    image: LANDING_PAGE_IMAGES.TREATMENT.SERVICE_5,
   },
   {
     title: "Regenerative Therapies",
     subtitle: "Morpheus8, Hair Restoration, and SkinPen Microneedling",
-    image: LANDING_PAGE_IMAGES.TREATMENT.SERVICE_2,
+    image: LANDING_PAGE_IMAGES.TREATMENT.SERVICE_6,
   },
   {
     title: "Wellness Therapies",
     subtitle: "Medical Weight Loss featuring Semaglutide and Tirzepatide",
-    image: LANDING_PAGE_IMAGES.TREATMENT.SERVICE_3,
+    image: LANDING_PAGE_IMAGES.TREATMENT.SERVICE_7,
   },
 ];
 
@@ -52,7 +52,7 @@ export default function Treatment() {
   const [isPaused, setIsPaused] = useState(false);
   const [isInteracting, setIsInteracting] = useState(false);
 
-  // ✅ AUTO SCROLL
+  // AUTO SCROLL
   useEffect(() => {
     const container = scrollRef.current;
     if (!container) return;
@@ -79,7 +79,7 @@ export default function Treatment() {
     return () => cancelAnimationFrame(animationId);
   }, [isPaused, isInteracting]);
 
-  // ✅ ARROW CONTROL
+  // ARROW CONTROL
   const scroll = (direction: "left" | "right") => {
     const container = scrollRef.current;
     if (!container) return;

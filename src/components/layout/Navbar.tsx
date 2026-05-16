@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, ChevronDown, ArrowUpRight } from "lucide-react";
@@ -28,35 +28,17 @@ const treatmentCategories = [
 ];
 
 export default function Navbar() {
-  const [opacity, setOpacity] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [isTreatmentOpen, setIsTreatmentOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const maxOpacity = 0.95;
-      const currentOpacity = Math.min(maxOpacity, (scrollY / 100) * maxOpacity);
-      setOpacity(currentOpacity);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <div className="relative" onMouseLeave={() => setActiveMenu(null)}>
       <nav
         className={cn(
-          "fixed top-[31px] left-0 w-full z-[999] transition-all duration-300 flex items-center",
+          "relative w-full bg-white transition-all duration-300 flex items-center",
           "h-[72px] md:h-[88px] lg:h-[108px]"
         )}
-        style={{
-          backgroundColor: `rgba(255, 255, 255, ${opacity})`,
-          backdropFilter: opacity > 0 ? "blur(6px)" : "none",
-          WebkitBackdropFilter: opacity > 0 ? "blur(8px)" : "none",
-        }}
       >
         <div className="container-custom flex items-center justify-between h-full">
           {/* LOGO */}
@@ -155,7 +137,7 @@ export default function Navbar() {
                 else if (item.name === "About Us") href = "/about";
                 else if (item.name === "Contact Us") href = "/contact";
 
-                // ✅ TREATMENT (CLICKABLE + ACCORDION)
+                // TREATMENT (CLICKABLE + ACCORDION)
                 if (item.name === "Treatment") {
                   return (
                     <div
@@ -219,7 +201,7 @@ export default function Navbar() {
                   );
                 }
 
-                // ✅ NORMAL LINKS
+                // NORMAL LINKS
                 return (
                   <Link
                     key={item.name}

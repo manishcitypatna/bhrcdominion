@@ -14,8 +14,6 @@ w-full
 h-[50vw] md:h-[90vh]
 flex items-end justify-center 
 overflow-hidden 
-mt-[103px] md:mt-0
-pt-0 md:pt-[139px]
 pb-2 md:pb-12
 ">
 

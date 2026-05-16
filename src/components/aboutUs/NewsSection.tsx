@@ -1,18 +1,19 @@
 "use client";
 
 import Image from "next/image";
+import { ABOUT_PAGE_IMAGES } from "../../../public/images/aboutPageImages";
 
 const news = [
   {
-    img: "/images/aboutUs/09.png",
+    img: ABOUT_PAGE_IMAGES.NEWS.ITEM_1,
     title: "BHRC CEO Shares Leadership Insights",
   },
   {
-    img: "/images/aboutUs/10.png",
+    img: ABOUT_PAGE_IMAGES.NEWS.ITEM_2,
     title: "Ribbon Cutting Celebration",
   },
   {
-    img: "/images/aboutUs/11.png",
+    img: ABOUT_PAGE_IMAGES.NEWS.ITEM_3,
     title: "Regenerative Health Discussions",
   },
 ];
