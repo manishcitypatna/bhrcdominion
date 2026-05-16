@@ -1,6 +1,6 @@
 export type Blog = {
   id: number;
-  slug: string; // ✅ REQUIRED
+  slug: string; 
   title: string;
   category: string[];
   date: string;
@@ -107,6 +107,16 @@ export const blogsData: Blog[] = [
     date: "April 12, 2026",
     description:
       "When comparing PDO threads and fillers, it’s important to consider your aesthetic goals...",
+    image: "/images/blog/04.jpg",
+  },
+  {
+    id: 11,
+    slug: "skinpen-microneedling-benefits-for-skin-texture-and-scars",
+    title: "Everything You Need to Know About SkinPen Microneedling",
+    category: ["Microneedling"],
+    date: "May 17, 2026",
+    description:
+      "Discover how SkinPen Microneedling helps improve acne scars, skin texture, fine lines, and collagen production with minimal downtime.",
     image: "/images/blog/04.jpg",
   },
 ];

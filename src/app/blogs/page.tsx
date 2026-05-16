@@ -1,12 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Footer from "@/components/layout/Footer";
 import FeaturedBlogCard from "@/components/blog/FeaturedBlogCard";
 import BlogGrid from "@/components/blog/BlogGrid";
 import BlogSidebar from "@/components/blog/BlogSidebar";
 import { blogsData, featuredBlog } from "@/data/blogsData";
-
 export default function BlogsPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
