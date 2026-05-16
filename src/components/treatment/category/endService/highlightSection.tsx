@@ -35,7 +35,7 @@ export default function HighlightSection({ data }: any) {
           }}
           className="max-w-3xl mx-auto mt-10"
         >
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl px-6 py-6 md:px-10 md:py-8 shadow-[0_10px_40px_rgba(15,23,42,0.04)] border border-white/60">
+          <div className="bg-white/90 backdrop-blur-sm rounded-[6px] px-6 py-6 md:px-10 md:py-8 shadow-[0_10px_40px_rgba(15,23,42,0.04)] border border-white/60">
 
             <div className="space-y-5">
               {data.content.map((paragraph: string, index: number) => (

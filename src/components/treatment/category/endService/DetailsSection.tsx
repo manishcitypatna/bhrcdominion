@@ -9,7 +9,7 @@ export default function DetailsSection({ data }: any) {
   alt="image"
   width={600}
   height={400}
-  className="rounded-xl"
+  className="rounded-[6px]"
 />
 
         <div>

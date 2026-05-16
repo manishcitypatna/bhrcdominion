@@ -45,7 +45,7 @@ export default function WhoIsThisFor({ data }: any) {
             >
 
               {/* IMAGE */}
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-primary">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-[8px] bg-primary">
                 <Image
                   src={item.image}
                   alt={item.title}

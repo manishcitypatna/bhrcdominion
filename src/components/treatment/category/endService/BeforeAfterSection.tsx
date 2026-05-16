@@ -29,7 +29,7 @@ export default function BeforeAfterSection({ data }: { data: BeforeAfterData }) 
         {/* IMAGES GRID */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {data.images.map((img, index) => (
-            <div key={index} className="relative aspect-square overflow-hidden rounded-sm group">
+            <div key={index} className="relative aspect-square overflow-hidden rounded-[6px] group">
               <Image
                 src={img}
                 alt={`${data.title} before and after ${index + 1}`}

@@ -94,7 +94,7 @@ export default function WhatToExpect({ data }: any) {
               duration: 0.8,
               ease: "easeOut",
             }}
-            className="relative h-[420px] md:h-[620px] rounded-3xl overflow-hidden"
+            className="relative h-[420px] md:h-[620px] rounded-[6px] overflow-hidden"
           >
             <Image
               src={data.image}
