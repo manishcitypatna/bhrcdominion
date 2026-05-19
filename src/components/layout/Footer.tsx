@@ -115,12 +115,6 @@ export default function Footer() {
 
         </div>
       </div>
-      {/* BIG BACKGROUND LOGO (FIXED) 
-      <div className="absolute bottom-0 left-0 w-full opacity-[0.06] pointer-events-none"> 
-        <div className="relative w-full h-[180px] md:h-[220px] lg:h-[260px]"> 
-          <Image src="/images/landing_page_01/logo/logo_white_footer.png" alt="bg-logo" fill className="object-contain object-bottom scale-110" /> 
-        </div> 
-      </div>*/}
     </footer>
   );
 }

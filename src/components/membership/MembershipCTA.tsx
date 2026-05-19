@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
-const CTA_BG = "/images/landing_page_01/seeTheDifference/seeTheDifference_bg.png";
+const CTA_BG = "https://res.cloudinary.com/dcvco8nlz/image/upload/v1777929724/seeTheDifference_bg_pvpsvw.png";
 
 export default function CTA() {
   return (
@@ -28,7 +28,7 @@ export default function CTA() {
         {/* Logo */}
 <div className="mb-4 relative w-8 h-8 md:w-10 md:h-10">
   <Image
-    src="/images/landing_page_01/logo/logo_icon.png"
+    src="https://res.cloudinary.com/dcvco8nlz/image/upload/v1777928254/logo_blue_emo6wa.png"
     alt="BHRC Logo"
     fill
     className="object-contain"

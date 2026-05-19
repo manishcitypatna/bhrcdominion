@@ -1,3 +1,4 @@
+import Hero_2 from "@/components/sections/Hero_2";
 import Hero from "@/components/sections/Hero";
 import BlueBand from "@/components/sections/BlueBand";
 import Treatment from "@/components/sections/Treatment";
@@ -14,6 +15,8 @@ import CTA from "@/components/sections/cta";
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-x-hidden">
+      {/* Hero_2 is new hero section */}
+      {/*<Hero_2 />*/}
       <Hero />
       <BlueBand />
       <Treatment />

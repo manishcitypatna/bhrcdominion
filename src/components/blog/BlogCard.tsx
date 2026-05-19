@@ -6,7 +6,7 @@ import { Blog } from "@/data/blogsData";
 
 export default function BlogCard({ blog, index }: { blog: Blog; index: number }) {
 
-  // ✅ DESCRIPTION TRUNCATE (190 chars)
+  // DESCRIPTION TRUNCATE (190 chars)
   const truncatedDesc =
     blog.description.length > 190
       ? blog.description.slice(0, 190) + "..."
@@ -60,23 +60,6 @@ export default function BlogCard({ blog, index }: { blog: Blog; index: number })
         <p className="text-primary/70 text-[14px] leading-[1.5] mb-3">
           {truncatedDesc}
         </p>
-
-        {/* BUTTON (ALIGNED BOTTOM) */}
-        <Link
-          href={`/blogs/${blog.slug}`}
-          className="
-                    mt-auto
-                    w-fit 
-                    text-[13px] 
-                    text-primary 
-                    border border-primary/30 
-                    px-3 py-1.5 
-                    rounded-md 
-                    hover:bg-primary hover:text-white 
-                    transition
-                  ">
-          Read More →
-        </Link>
 
       </div>
 

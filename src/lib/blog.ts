@@ -48,7 +48,13 @@ export async function getBlogArticleBySlug(slug: string): Promise<BlogArticle | 
 
     return {
       metadata: {
-        ...(data as Omit<BlogArticleMetadata, "slug">),
+        title: data.title || "Untitled",
+        description: data.description || "",
+        date: data.date || new Date().toISOString(),
+        author: data.author || "Admin",
+        categories: data.categories || data.tags || [],
+        coverImage: data.coverImage || "/images/blog/placeholder.jpg",
+        readingTime: data.readingTime || "5 min read",
         slug,
       },
       content,
